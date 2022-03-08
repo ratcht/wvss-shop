@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+</head>
+<body>
+    <div class="table-data">
+<h2>Display Data using Node.js & MySQL</h2>
+    <table border="1">
+        <tr>
+            <th>sku</th>
+            <th>name</th>
+            <th>price</th>
+        </tr>
+        
+        <%
+        if(productData.length!=0){
+        var i=1;
+        productData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=data.sku %></td>
+            <td><%=data.name %></td>
+            <td><%=data.price %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="3">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
