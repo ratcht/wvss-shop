@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+const dotenv = require('dotenv').config();
 var conn = mysql.createConnection({
   host: 'sql3.freemysqlhosting.net', // Replace with your host name
   user: 'sql3477589',      // Replace with your database username

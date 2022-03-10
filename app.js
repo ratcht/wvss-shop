@@ -5,12 +5,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
+var helpRouter = require('./routes/help');
+var aboutRouter = require('./routes/about');
 
 var app = express();
 
 // view engine setup
-app.use('/', indexRouter);
-app.use('/home', productsRouter);
+app.use('/home', indexRouter);
+app.use('/categories', productsRouter);
+app.use('/help', helpRouter);
+app.use('/about', aboutRouter);
 
 
 
