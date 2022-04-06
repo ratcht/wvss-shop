@@ -8,6 +8,6 @@ router.get('/', function(req, res, next) {
     db.query(sql, function (err, data, fields) {
     if (err) throw err;
     res.render('categories', { title: 'Product List', productData: data});
-  });
+});
 });
 module.exports = router;

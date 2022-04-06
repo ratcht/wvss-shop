@@ -1,106 +1,18 @@
-:root {
-    --navbar_height: 100px;
-    --main_red_color: #b85143;
-    --darker_red_color: #8d4135;
-}
-body {
-    padding-top: 0%;
-    margin: 0%;
-}
-ul { 
+ul {
     list-style-type: none;
-    }
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--main_red_color);
-    align-items: center;
-    height: var(--navbar_height);
-
-    
 }
-#nav_list {
-    display: flex;
-    justify-content: space-around;
-    font-family: Open Sans;
-    color:whitesmoke;
-    height: var(--navbar_height);
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
+nav {
+    background-color: #b85143;
 }
-.nav_area {
-    height: 100%;
-    display: flex;
-    align-items: center;
+nav.InDxNv {
+    background-color: #eaeaea;
 }
-.nav_area:hover {
-    background-color: var(--darker_red_color);
-}
-li {
-    margin: 15px;
-}
-.featured_product_image {
-    width: 80%;
-    border-radius: 25px;
-}
-#featured_product {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 60px;
-
-}
-#product_space article {
-    width: 200px;
-    height: 200px;
-    background-color: cadetblue;
-}
-#product_space {
-    width: 70%;
-    display: grid;
-    grid-template-columns: 240px 240px 240px 240px;
-    row-gap: 45px;
-    column-gap: 25px;
-    padding-top: 40px;
-    padding-left: 50px;
-}
-
-#main_body {
-    display: flex;
-    justify-content: safe;
-}
-
-#category_selection {
-    display: flex;
-    column-gap: 20px;
-    padding-top: 80px;
-    flex-direction: column;
-    text-align: end;
-}
-.category {
-    font-family: Open Sans;
-}
-.first_level_category {
-    font-size: 150%;
-    font-weight: 600;
-}
-.category_line {
-    height: 1px;
-    color: black;
-    background-color: black;
-}
-.header input {
-    border: none;
-    padding: 10px;
-    width: 55%;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-    border-radius: 8px;
-    background-color: whitesmoke;
-}
-.logo {
-    height: 70px;
-    width: 70px;
-    padding-left: 30px;
+input {
+    border-radius: 2px;
+    height: 50%;
+    background-image: url('../assets/searchicon.png');
+    background-repeat: no-repeat; 
+    background-size: auto 50%; 
+    background-position: 12px;
+    padding-left: 40px !important;
 }

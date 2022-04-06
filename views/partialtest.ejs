@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%- include('./partials/head') %> 
+</head>
+<body>
+    <% locals.data.forEach(element => { %>
+        <div class="col-sm-3 col-md-3 mb-2">
+        <img src="/assets/item-example.jpg" alt="nevim" class="w-100">
+        </div>  
+    <% }) %>
+    <%- include('./partials/navbar') %> 
+</body>
+</html>
