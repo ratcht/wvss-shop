@@ -1,10 +1,11 @@
 var mysql = require('mysql');
 const dotenv = require('dotenv').config();
 var conn = mysql.createConnection({
-  host: 'sql3.freemysqlhosting.net', // Replace with your host name
-  user: 'sql3477589',      // Replace with your database username
-  password: '1YiaTdfLpz',      // Replace with your database password
-  database: 'sql3477589' // // Replace with your database Name
+  host: 'localhost', // Replace with your host name
+  user: 'root',      // Replace with your database username
+  password: 'BlueSmurf72@2021',      // Replace with your database password
+  port: 3306,
+  database: 'wvss-shop' // // Replace with your database Name
 }); 
 conn.connect(function(err) {
   if (err) throw err;

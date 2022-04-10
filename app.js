@@ -4,7 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
-//var productsRouter = require('./routes/products');
+var productsRouter = require('./routes/products');
+var individualProductRouter = require('./routes/individualProductRouter');
 var helpRouter = require('./routes/help');
 var aboutRouter = require('./routes/about');
 var testRouter = require('./routes/test')
@@ -16,7 +17,8 @@ var app = express();
 // view engine setup
 app.use('/' ,indexRouter)
 app.use('/home', indexRouter);
-//app.use('/categories', productsRouter);
+app.use('/categories', productsRouter);
+app.use('/products', individualProductRouter);
 app.use('/helpp', helpRouter);
 app.use('/about', aboutRouter);
 app.use('/test' , testRouter)
