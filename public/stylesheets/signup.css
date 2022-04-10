@@ -1,0 +1,114 @@
+body {
+    margin: 0%;
+}
+header {
+    height: 150px;
+    display: flex;
+    background-color: #D06050;
+    justify-content: center;
+    align-items: center;
+}
+img.logo {
+    width: 140px;
+    height: 140px;
+}
+main {
+    display: flex;
+    height:800px;
+    justify-content: center;
+    align-items: center;
+    font-family: Open Sans;
+
+}
+#sign-in-window {
+    height: 600px;
+    width: 360px;
+    background-color: #eaeaea;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    background-color: slategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+#sign-in-content {
+    display: grid;
+    grid-template-rows: repeat(2, 8.5%) 4.25% repeat(6,8.5%);
+    row-gap: 2%;
+    width: 75%;
+    height: 90%;
+
+}
+#sign-in-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 580px;
+    width: 400px;
+    font-family: Open Sans;
+}
+
+#sign-in-up {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+#sign-in-up div {
+    height: 85%;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sign-in-up div.sign-container {
+    border-bottom: 1px solid black;
+}
+#sign-up-container {
+    color: black;
+    border-bottom: 1px solid black;
+}
+#sign-in-container {
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+input[type="text"] {
+    font-size: 16px;
+    border: 0px;
+    padding-left: 5%;
+}
+input[type="password"] {
+    font-size: 16px;
+    border: 0px;
+    padding-left: 5%;
+}
+#terms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;  
+}
+input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+}
+#google_signin {
+    background-color: #ffffff;
+    font-family: Open Sans;
+    font-size: 16px;
+    border: 0px;
+    height: 50px;
+}
+#sign-up-button {
+    background-color: #ff6868;
+    font-family: Open Sans;
+    font-size: 16px;
+    border: 0px;
+    height: 50px;
+}

@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var helpRouter = require('./routes/help');
 var aboutRouter = require('./routes/about');
 var testRouter = require('./routes/test')
+var loginRouter = require('./routes/login')
+var signupRouter = require('./routes/signup')
 
 var app = express();
 
@@ -18,6 +20,10 @@ app.use('/home', indexRouter);
 app.use('/helpp', helpRouter);
 app.use('/about', aboutRouter);
 app.use('/test' , testRouter)
+app.use('/login' , loginRouter)
+app.use('/signup' , signupRouter)
+
+
 
 //hynek added - testing
 app.listen(3000)
