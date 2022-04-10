@@ -5,7 +5,7 @@
     <%- include('./partials/head') %> 
     <%- include('./partials/navbar-test') %>
 </head>
-<body class="pt-5 mt-4" style="height: 2000px; font-family: Open Sans;">
+<body class="pt-4 pt-md-5 mt-4" style="height: 2000px; font-family: Open Sans;">
     <div id="carouselExampleSlidesOnly" class="carousel mx-0" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -17,9 +17,9 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-10 col-md-8 mt-5">
+        <div class="col-12 col-md-10 mt-5">
             <div class="row justify-content-center">
-                <div class="col-10 col-md-8" style="font-size: 16;">
+                <div class="col-10 col-md-10" style="font-size: 16;">
                     
                     <div class="row justify-content-center">
                         <div class="col d-flex justify-content-center my-5" style="font-size: 25px;">
@@ -27,20 +27,28 @@
                         </div>
                     </div>
                     
-                    <div class="row d-flex justify-content-between mb-5 mt-4">
+                    <div class="row d-flex justify-content-between mb-3 mt-4">
                         <div class="col-6 col-sm-5">
-                            <div class="container" style="background-color: gray;border-radius: 15px; min-height: 70px;min-width:60px ;">
+                            <div class="container d-flex align-items-center" style="background-color: #e8e5e5;border-radius: 15px; min-height: 70px;min-width:60px ;">
+                                <span class="d-none d-sm-inline-block" style="background-color: #f1adad;border-radius:50%;height: 35px;width: 35px;"></span>
                                 <b>My orders</b>
                             </div>
                         </div>
                         <div class="col-6 col-sm-5">
-                            <div class="container" style="background-color: gray;border-radius: 15px;  min-height: 70px; min-width:60px ;">
+                            <div class="container d-flex align-items-center" style="background-color: #e8e5e5;border-radius: 15px;  min-height: 70px; min-width:60px ;">
+                                <span class="d-none d-sm-inline-block me-2" style="background-color: #99c4f7;border-radius:50%;height: 35px;width: 35px;"></span>
                                 <b>Send us an email</b>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col" style="text-align: center;">
+                            Any questions regarding our service may be answered here. For any concerns that were not addressed, contact us at ().
+                        </div>
+                    </div>
+
+                    <div class="row mt-5 py-3" style="background-color: #e8e5e5; border-radius: 10px;">
                         <div class="col">
                             <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ1" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 <b>How do I pick up my order?</b> 
