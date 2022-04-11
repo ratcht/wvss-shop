@@ -3,10 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('productpage', { data: ['lol1','lol2','s','sss','ff'], title: 'Wvss Testing Crew'});
+  res.render('productpage-test', { data: ['lol1','lol2','s','sss','ff', 'xsd'], title: 'Wvss Testing Crew'});
 });
-router.get('/menu', function(req, res, next) {
-  res.render('mainmenu', {title: 'Wvss Testing Crew'});
+router.get('/product', function(req, res, next) {
+  res.render('detail-product', {data: ['lol1','lol2','s','sss','ff', 'xsd'], title: 'Wvss Testing Crew'});
 });
 
 module.exports = router;

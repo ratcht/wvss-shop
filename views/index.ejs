@@ -14,18 +14,34 @@
     </div>
     <div class="container-fluid">
         <div class="container-fluid mt-5" style="width: 90% !important;">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <div class="row">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row justify-content-between mt-5">
+                        <div class="col-2">
+                            <b style="white-space: nowrap;">Featured Products</b>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end mb-4">
+                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
                         <% locals.data.forEach(element => { %>
-                            <div class="col-sm-3 col-md-3 mb-2">
+                            <div class="col-6 col-sm-3 col-md-2 mb-2">
                                 <%- include('./partials/shop-item') %>
                             </div>  
                         <% }) %>
                     </div>
+                    <div class="row justify-content-between">
+                        <div class="col-2">
+                            <b style="white-space: nowrap;">Trending Clothing</b>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end mb-4">
+                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                     <div class="row">
                       <% locals.data.forEach(element => { %>
-                        <div class="col-sm-3 col-md-3 mb-2">
+                        <div class="col-6 col-sm-3 col-md-2 mb-2">
                             <%- include('./partials/shop-item') %>
                         </div>  
                     <% }) %>
