@@ -3,7 +3,7 @@
 <head>
     <title><%= title %></title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar-test') %>
+    <%- include('./partials/navbar') %>
 
 </head>
 
@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="container-fluid mt-5" style="width: 90% !important;">
             <div class="row">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-9 col-lg-10">
                     <div class="row">
                         <% locals.data.forEach(element => { %>
                             <div class="col-sm-3 col-md-3 mb-2">
@@ -22,41 +22,38 @@
                     </div>
                         
                 </div>
-                <div class="col-4 d-none d-md-block">
+                <div class="col-md-3 col-lg-2 d-none d-md-block ">
                     <div>
-                        <ul class="category">
-                            <li class="first_level_category">All categories</li>
+                        <ul class="category nav-pills flex-column">
+                            <li class="first_level_category nav-item"><a href="#" class="nav-link"><b>All categories</b></a></li>
                         </ul>
                     </div>
                     <div>
-                        <ul class="category">
-                            <li class="first_level_category">Clothing</li>
+                        <ul class="nav-pills flex-column">
+                            <li class="first_level_category nav-item"><a href="#" class="nav-link"><b>Clothing</b></a></li>
                             <hr class="category_line">
-                            <li class="second_level_cat">Sweatshirts</li>
-                            <li class="second_level_cat">Polos</li>
-                            <li class="second_level_cat">T-Shirts</li>
-                            <li class="second_level_cat">Jackets</li>
-                            <li class="second_level_cat">Hats</li>
+                            <li class="second_level_cat nav-item"> <a href="#" class="nav-link active">Sweatshirts</a></li>
+                            <li class="second_level_cat nav-item"> <a href="#" class="nav-link">Polos</a></li>
+                            <li class="second_level_cat nav-item"> <a href="#" class="nav-link">T-Shirts</a></li>
+                            <li class="second_level_cat nav-item"> <a href="#" class="nav-link">Jackets</a></li>
+                            <li class="second_level_cat nav-item"> <a href="#" class="nav-link">Hats</a></li>
                         </ul>
                     </div>
                     <div>
-                        <ul class="category">
-                            <li class="first_level_category">Club Products</li>
+                        <ul class="category nav-pills">
+                            <li class="first_level_category nav-item"><a href="#" class="nav-link"><b>Club Products</b></a></li>
                             <hr class="category_line">
-                            <li class="second_level_cat">Jerseys</li>
-                            <li class="second_level_cat">Balls</li>
-                            <li class="second_level_cat">Knee Pads</li>
+                            <li class="second_level_cat nav-item"><a href="#" class="nav-link">Jerseys</a></li>
+                            <li class="second_level_cat nav-item"><a href="#" class="nav-link">Balls</a></li>
+                            <li class="second_level_cat nav-item"><a href="#" class="nav-link">Knee Pads</a></li>
                         </ul>
                     </div>
                     <div>
-                        <ul class="category">
-                            <li class="first_level_category">Student Artwork</li>
+                        <ul class="category nav-pills">
+                            <li class="first_level_category nav-item"><a href="#" class="nav-link"><b>Student Artwork</b></a></li>
                             <hr class="category_line">
-                            <li class="second_level_cat">Sweatshirts</li>
-                            <li class="second_level_cat">Polos</li>
-                            <li class="second_level_cat">T-Shirts</li>
-                            <li class="second_level_cat">Jackets</li>
-                            <li class="second_level_cat">Hats</li>
+                            <li class="second_level_cat nav-item"><a href="#" class="nav-link">Digital</a></li>
+                            <li class="second_level_cat nav-item"><a href="#" class="nav-link">Physical</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,6 +61,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <%- include('./partials/bootstrapscript') %>
 </body>
 </html>
