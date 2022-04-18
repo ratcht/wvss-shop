@@ -5,8 +5,8 @@
     <%- include('./partials/head') %> 
     <%- include('./partials/navbar') %>
 </head>
-<body class="pt-4 pt-md-5 mt-4" style="height: 2000px; font-family: Open Sans;">
-    <div id="carouselExampleSlidesOnly" class="carousel mx-0" data-bs-ride="carousel">
+<body class="pt-4 pt-md-5 mt-4" style="height: 2000px; font-family: Open Sans; overflow-x: hidden;">
+    <div id="carouselExampleSlidesOnly" class="carousel mx-0" data-bs-ride="carousel" style="width: 100vw;">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="assets/SeaJacket.jpg" class="d-block w-100" alt="...">
@@ -16,84 +16,86 @@
         </div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-10 mt-5">
-            <div class="row justify-content-center">
-                <div class="col-10 col-md-8" style="font-size: 16;">
-                    
-                    <div class="row justify-content-center">
-                        <div class="col d-flex justify-content-center my-5" style="font-size: 25px;">
-                            <b>Related Actions</b>
-                        </div>
-                    </div>
-                    
-                    <div class="row d-flex justify-content-between mb-3 mt-4">
-                        <div class="col-6 col-sm-5">
-                            <div class="container d-flex align-items-center" onclick="location.href='/';" style="background-color: #e8e5e5;border-radius: 15px; min-height: 70px;min-width:60px; cursor: pointer;">
-                                <span class="d-none d-sm-inline-block me-2" style="background-color: #f1adad;border-radius:50%;height: 35px;width: 35px;"></span>
-                                <b>My orders</b>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-md-8" style="font-size: 16;">
+                        
+                        <div class="row justify-content-center">
+                            <div class="col d-flex justify-content-center my-5" style="font-size: 25px;">
+                                <b>Related Actions</b>
                             </div>
                         </div>
-                        <div class="col-6 col-sm-5">
-                            <div class="container d-flex align-items-center" onclick="location.href='/';" style="background-color: #e8e5e5;border-radius: 15px;  min-height: 70px; min-width:60px; cursor: pointer;">
-                                <span class="d-none d-sm-inline-block me-2" style="background-color: #99c4f7;border-radius:50%;height: 35px;width: 35px;"></span>
-                                <b>Send us an email</b>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row d-flex justify-content-center mt-5 pt-4">
-                        <div class="col" style="text-align: center;">
-                            <b>Any questions regarding our service may be answered here. For any concerns that were not addressed, contact us at ().</b>
-                        </div>
-                    </div>
-
-                    <div class="row mt-5 py-3" style="background-color: #e8e5e5; border-radius: 10px;">
-                        <div class="col">
-                            <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ1" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <b>How do I pick up my order?</b>
-                            </div>
-                            <div class="collapse" id="collapseQ1">
-                                <div class="card card-body">
-                                    Once you have received a confirmation email for your order, it will be available for pick up when shown to the receptionist at the main office. 
+                        
+                        <div class="row d-flex justify-content-between mb-3 mt-4">
+                            <div class="col-6 col-sm-5">
+                                <div class="container d-flex align-items-center" onclick="location.href='/';" style="background-color: #e8e5e5;border-radius: 15px; min-height: 70px;min-width:60px; cursor: pointer;">
+                                    <span class="d-none d-sm-inline-block me-2" style="background-color: #f1adad;border-radius:50%;height: 35px;width: 35px;"></span>
+                                    <b>My orders</b>
                                 </div>
                             </div>
-                            <hr>
-
-                            <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ2" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <b>What should I do if my order is late?</b> 
-                            </div>
-                            <div class="collapse" id="collapseQ2">
-                                <div class="card card-body">
-                                    If you haven’t received a confirmation email for your order after the expected date, you can send us an email at (), or talk to the receptionist at the main office. 
-                                </div>
-                            </div>
-                            <hr>
-
-                            <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ3" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <b>How do I cancel my order?</b> 
-                            </div>
-                            <div class="collapse" id="collapseQ3">
-                                <div class="card card-body">
-                                    An order can be cancelled any time before the end of the “cancellation period” through the “My Orders” page.
-                                </div>
-                            </div>
-                            <hr>
-
-                            <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ4" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <b>How do I return my past order?</b> 
-                            </div>
-                            <div class="collapse" id="collapseQ4">
-                                <div class="card card-body">
-                                    Unfortunately we do not accept any returns of previous orders.
+                            <div class="col-6 col-sm-5">
+                                <div class="container d-flex align-items-center" onclick="location.href='/';" style="background-color: #e8e5e5;border-radius: 15px;  min-height: 70px; min-width:60px; cursor: pointer;">
+                                    <span class="d-none d-sm-inline-block me-2" style="background-color: #99c4f7;border-radius:50%;height: 35px;width: 35px;"></span>
+                                    <b>Send us an email</b>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    
+                        <div class="row d-flex justify-content-center mt-5 pt-4">
+                            <div class="col" style="text-align: center;">
+                                <b>Any questions regarding our service may be answered here. For any concerns that were not addressed, contact us at ().</b>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 py-3" style="background-color: #e8e5e5; border-radius: 10px;">
+                            <div class="col">
+                                <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <b>How do I pick up my order?</b>
+                                </div>
+                                <div class="collapse" id="collapseQ1">
+                                    <div class="card card-body">
+                                        Once you have received a confirmation email for your order, it will be available for pick up when shown to the receptionist at the main office. 
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <b>What should I do if my order is late?</b> 
+                                </div>
+                                <div class="collapse" id="collapseQ2">
+                                    <div class="card card-body">
+                                        If you haven’t received a confirmation email for your order after the expected date, you can send us an email at (), or talk to the receptionist at the main office. 
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <b>How do I cancel my order?</b> 
+                                </div>
+                                <div class="collapse" id="collapseQ3">
+                                    <div class="card card-body">
+                                        An order can be cancelled any time before the end of the “cancellation period” through the “My Orders” page.
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <b>How do I return my past order?</b> 
+                                </div>
+                                <div class="collapse" id="collapseQ4">
+                                    <div class="card card-body">
+                                        Unfortunately we do not accept any returns of previous orders.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+            
                 </div>
-        
             </div>
         </div>
     </div>
