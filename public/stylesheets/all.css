@@ -4,7 +4,7 @@ ul {
 nav {
     background-color: #b85143;
 }
-nav.InDxNv {
+nav.index {
     background-color: #eaeaea;
 }
 input {
@@ -15,4 +15,16 @@ input {
     background-size: auto 50%; 
     background-position: 12px;
     padding-left: 40px !important;
+}
+.nav-link {
+    color: black;
+}
+.active {
+    background-color: #b85143 !important;
+}
+.nav-item {
+    text-align: end;
+}
+body {
+    font-family: Open Sans;
 }

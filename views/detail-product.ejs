@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <%- include('./partials/head') %> 
+    <%- include('./partials/navbar') %>
+    <link rel="stylesheet" href="/stylesheets/detail-product.css">
+
+</head>
+
+<body class="pt-5 pt-md-5" style="height: 2000px; font-family: Open Sans;">
+    
+    <div class="container-fluid">
+        <div class="container-fluid mt-5" style="width: 90% !important;">
+            <div class="row">
+                <div class="col">
+                    <a href="#" style="text-decoration: none; color: black; "><i class="fa-solid fa-arrow-left"></i> Back to Results</a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-md-6 col-lg-5">
+                        <div class="container vFru">
+                            <div class="row">
+                                <div class="col-12 col-xl-3 order-last order-xl-0">
+                                    <div class="row container">
+                                        <div class="col-3 col-xl-12">
+                                            <img src="/assets/item-example.jpg" alt="item-item" style="width: 90px;">
+                                        </div>
+                                        <div class="col-3 col-xl-12">
+                                            <img src="/assets/item-example.jpg" alt="item-item" style="width: 90px;">
+                                        </div>
+                                        <div class="col-3 col-xl-12">
+                                            <img src="/assets/item-example.jpg" alt="item-item" style="width: 90px;">
+                                        </div>
+                                        <div class="col-3 col-xl-12">
+                                            <img src="/assets/item-example.jpg" alt="item-item" style="width: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-9">
+                                    <img src="/assets/item-example.jpg" alt="item-item" style="width: 24vw;">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 order-first order-md-0">
+                    <div class="row">
+                        <b>Random Artwork</b>
+                    </div>
+                    <div class="row">
+                        by Jamie Kang
+                    </div>
+                    <div class="row">
+                        This painging means
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-4">
+                    <div class="container" style="width: 90%; height: 100%; background-color: blue;">
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-12">This is a description filled with soul-soothing words like butter or butterscotch.</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row justify-content-between mt-5">
+                        <div class="col-2">
+                            <b style="white-space: nowrap;">Featured Products</b>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end mb-4">
+                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <% locals.data.forEach(element => { %>
+                            <div class="col-6 col-sm-3 col-md-2 mb-2">
+                                <%- include('./partials/shop-item') %>
+                            </div>  
+                        <% }) %>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-2">
+                            <b style="white-space: nowrap;">Trending Clothing</b>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end mb-4">
+                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <% locals.data.forEach(element => { %>
+                        <div class="col-6 col-sm-3 col-md-2 mb-2">
+                            <%- include('./partials/shop-item') %>
+                        </div>  
+                    <% }) %>
+                    </div>   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/bootstrapscript') %>
+</body>
+</html>

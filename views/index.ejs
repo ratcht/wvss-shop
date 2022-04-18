@@ -3,7 +3,7 @@
 <head>
     <title><%= title %></title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar-test') %>
+    <%- include('./partials/navbar') %>
     <%- include('./partials/index-navbar') %>
 
 </head>
@@ -14,18 +14,34 @@
     </div>
     <div class="container-fluid">
         <div class="container-fluid mt-5" style="width: 90% !important;">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <div class="row">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row justify-content-between mt-5">
+                        <div class="col-2">
+                            <b style="white-space: nowrap;">Featured Products</b>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end mb-4">
+                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
                         <% locals.data.forEach(element => { %>
-                            <div class="col-sm-3 col-md-3 mb-2">
+                            <div class="col-6 col-sm-3 col-md-2 mb-2">
                                 <%- include('./partials/shop-item') %>
                             </div>  
                         <% }) %>
                     </div>
+                    <div class="row justify-content-between">
+                        <div class="col-2">
+                            <b style="white-space: nowrap;">Trending Clothing</b>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end mb-4">
+                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                     <div class="row">
                       <% locals.data.forEach(element => { %>
-                        <div class="col-sm-3 col-md-3 mb-2">
+                        <div class="col-6 col-sm-3 col-md-2 mb-2">
                             <%- include('./partials/shop-item') %>
                         </div>  
                     <% }) %>
@@ -35,6 +51,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <%- include('./partials/bootstrapscript') %>
 </body>
 </html>
