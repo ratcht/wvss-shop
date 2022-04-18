@@ -4,6 +4,8 @@
     <title><%= title %></title>
     <%- include('./partials/head') %> 
     <%- include('./partials/navbar') %>
+    <%  console.log(data.name);
+    %>
     <link rel="stylesheet" href="/stylesheets/detail-product.css">
 
 </head>
@@ -14,7 +16,7 @@
         <div class="container-fluid mt-5" style="width: 90% !important;">
             <div class="row">
                 <div class="col">
-                    <a href="#" style="text-decoration: none; color: black; "><i class="fa-solid fa-arrow-left"></i> Back to Results</a>
+                    <a href="/products/categories" style="text-decoration: none; color: black; "><i class="fa-solid fa-arrow-left"></i> Back to Results</a>
                 </div>
             </div>
             <div class="row mt-4">
@@ -45,13 +47,13 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 order-first order-md-0">
                     <div class="row">
-                        <b>Random Artwork</b>
+                        <%= data.name %>
                     </div>
                     <div class="row">
                         by Jamie Kang
                     </div>
                     <div class="row">
-                        This painging means
+                        Price: $<%= data.price %>
                     </div>
                 </div>
                 <div class="col-12 col-md-8 col-lg-4">
@@ -72,7 +74,7 @@
                         </div>
                     </div>
                     <div class="row mb-5">
-                        <% locals.data.forEach(element => { %>
+                        <% productData.forEach(element => { %>
                             <div class="col-6 col-sm-3 col-md-2 mb-2">
                                 <%- include('./partials/shop-item') %>
                             </div>  
@@ -87,7 +89,7 @@
                         </div>
                     </div>
                     <div class="row">
-                      <% locals.data.forEach(element => { %>
+                      <% productData.forEach(element => { %>
                         <div class="col-6 col-sm-3 col-md-2 mb-2">
                             <%- include('./partials/shop-item') %>
                         </div>  
