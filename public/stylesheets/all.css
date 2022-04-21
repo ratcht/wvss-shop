@@ -25,6 +25,11 @@ input {
 .nav-item {
     text-align: end;
 }
+@media (max-width:770px) {
+   .nav-item {
+    text-align: start;
+   }
+}
 body {
     font-family: Open Sans;
 }
