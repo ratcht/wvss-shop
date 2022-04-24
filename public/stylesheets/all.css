@@ -33,3 +33,7 @@ input {
 body {
     font-family: Open Sans;
 }
+.shop-item:hover #item-info {
+    filter: brightness(80%);
+    transition: filter 700ms;
+}

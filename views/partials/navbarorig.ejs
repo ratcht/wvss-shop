@@ -33,20 +33,9 @@
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
             
-        </button> 
-         
-    </div>
-    <div class="dropdown me-3 d-none d-md-block order-last">
-        <a class="nav-link dropdown-toggle" href="#" id="userToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgba(255,255,255,.55);">
-            
-                <i class="fa-regular fa-circle-user"></i>
-                <b style="font-size: 0.8rem;">Hynek Lukeš</b>
-            
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="userToggle" style="background-color: #ECE7E5;">
-            <li><a class="dropdown-item" href="#">My Account</a></li>
-            <li><a class="dropdown-item" href="/test/orders">My orders</a></li>
-        </ul>
+        </button>  
+        <a href="/login" class="btn btn-light mx-1 mx-md-2 d-none d-sm-inline" style="white-space: nowrap;">Log in</a>
+        <a href="/signup" class="btn btn-dark ms-1 me-1 ms-md-3 me-md-5 d-none d-sm-inline" style="white-space: nowrap;">Sign up</a>
     </div>
     <div 
     class="collapse navbar-collapse"
@@ -70,46 +59,24 @@
         <ul class="navbar-nav me-3 py-2 ms-3">
             <li class="nav-item d-flex dropdown justify-content-center d-md-none container-fluid">
                 <div class="row">
-                    <div class="col justify-content-center ms-2">
-                        <a
-                            class="nav-link"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#usdd"
-                            aria-expanded="false">
-                        <i class="fa-regular fa-circle-user"></i>
-                        <b style="font-size: 0.8rem;">Hynek Lukeš</b>
-                        <i class="fa-solid fa-caret-down"></i>
-                        </a>
-                            <div class="container-fluid">
-                            <ul class="collapse" id="usdd" aria-labelledby="navbarDropdownMenuLink">
-                                <li> <a href="#" class="nav-link">My Account</a></li>
-                                <li> <a href="/test/orders" class="nav-link">My orders</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="coljustify-content-center ms-2">
+                    <a
+                    class="nav-link"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#xd"
+                    aria-expanded="false">
+                Categories <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <div class="container-fluid">
+                <ul class="collapse" id="xd" aria-labelledby="navbarDropdownMenuLink">
+                <li> <a href="#" class="nav-link">All Categories</a></li>
+                <li> <a href="#" class="nav-link">Clothing</a></li>
+                <li><a href="#" class="nav-link">Club Products</a></li>
+                <li><a href="#" class="nav-link mb-3">Artwork</a></li>
+                </ul>
                 </div>
-            </li>
-            <li class="nav-item d-flex dropdown justify-content-center d-md-none container-fluid">
-                <div class="row">
-                    <div class="col justify-content-center ms-2">
-                        <a
-                            class="nav-link"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#xd"
-                            aria-expanded="false">
-                        Categories <i class="fa-solid fa-caret-down"></i>
-                        </a>
-                            <div class="container-fluid">
-                            <ul class="collapse" id="xd" aria-labelledby="navbarDropdownMenuLink">
-                                <li> <a href="#" class="nav-link">All Categories</a></li>
-                                <li> <a href="#" class="nav-link">Clothing</a></li>
-                                <li><a href="#" class="nav-link">Club Products</a></li>
-                                <li><a href="#" class="nav-link mb-3">Artwork</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                </div>
                 </div>
             </li>
             <li class="d-flex nav-item mx-2 justify-content-center">
@@ -127,6 +94,12 @@
                     Log in
                 </a>
             </li>
+            <li class="d-flex nav-item ms-2 me-1 justify-content-center d-sm-none">
+                <a href="/signup" class="nav-link">
+                    Sign Up
+                </a>
+            </li>
+            
         </ul>
     </div>
 

@@ -4,7 +4,11 @@
     <title><%= title %></title>
     <%- include('./partials/head') %> 
     <%- include('./partials/navbar') %>
-    <link rel="stylesheet" href="/stylesheets/detail-product.css">
+    <link rel="stylesheet" href="/stylesheets/detail-product.css">\
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />  
 
 </head>
 
@@ -24,21 +28,51 @@
                                     <div class="col-3">
                                         <ul class="small-img-group w-100 px-0">
                                             <li class="small-img pb-1">
+                                                <a 
+                                                href="/assets/hoodie5.jpg"
+                                                data-fancybox="gallery"
+                                                data-caption="Black - M"
+                                                >
                                                 <img src="/assets/hoodie5.jpg" class="w-100" alt="item-item">
+                                                </a>
                                             </li>
                                             <li class="small-img pb-1">
+                                                <a 
+                                                href="/assets/hoodie2.jpg"
+                                                data-fancybox="gallery"
+                                                data-caption="Blue"
+                                                >
                                                 <img src="/assets/hoodie2.jpg" class="w-100" alt="item-item">
+                                                </a>
                                             </li>
                                             <li class="small-img pb-1">
+                                                <a 
+                                                href="/assets/hoodie3.jpg"
+                                                data-fancybox="gallery"
+                                                data-caption="Different color"
+                                                >
                                                 <img src="/assets/hoodie3.jpg" class="w-100" alt="item-item">
+                                                </a>
                                             </li>
                                             <li class="small-img pb-1">
+                                                <a 
+                                                href="/assets/hoodie4.jpg"
+                                                data-fancybox="gallery"
+                                                data-caption="idk"
+                                                >
                                                 <img src="/assets/hoodie4.jpg" class="w-100" alt="item-item">
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-9 xxvFru">
-                                        <img src="/assets/hoodie.jpg" alt="item-item" class="w-100">
+                                        <a 
+                                            href="/assets/hoodie.jpg"
+                                            data-fancybox="gallery"
+                                            data-caption="Oprionso nj"
+                                            >
+                                            <img src="/assets/hoodie.jpg" class="w-100" alt="item-item">
+                                            </a>
                                     </div>
                                 </div>
                             </div>
@@ -182,5 +216,6 @@
         </div>
     </div>
     <%- include('./partials/bootstrapscript') %>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 </body>
 </html>
