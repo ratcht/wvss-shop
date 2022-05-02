@@ -4,6 +4,8 @@
     <title><%= title %></title>
     <%- include('./partials/head') %> 
     <%- include('./partials/navbar') %>
+    <%  console.log(data.name);
+    %>
     <link rel="stylesheet" href="/stylesheets/detail-product.css">\
     <link
     rel="stylesheet"
@@ -18,7 +20,11 @@
         <div class="container-fluid mt-5" style="width: 90% !important;">
             <div class="row">
                 <div class="col">
+<<<<<<< HEAD
                     <a href="/test" style="text-decoration: none; color: black; "><i class="fa-solid fa-arrow-left"></i> Back to Results</a>
+=======
+                    <a href="/products/categories" style="text-decoration: none; color: black; "><i class="fa-solid fa-arrow-left"></i> Back to Results</a>
+>>>>>>> product-page
                 </div>
             </div>
             <div class="row mt-4">
@@ -79,11 +85,16 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 order-first order-md-0">
                     <div class="row">
+<<<<<<< HEAD
                         <h1>Random Artwork</h1>
+=======
+                        <%= data.name %>
+>>>>>>> product-page
                     </div>
                     <div class="row">
                         <p>by Jamie Kang</p>
                     </div>
+<<<<<<< HEAD
                 </div>
                 <div class="col-12 col-md-5 col-lg-3">
                     <div class="container-fluid buy-cont">
@@ -167,6 +178,10 @@
                                 <p style="color: gray;">Secure Transaction</p> 
                             </div>
                         </div>
+=======
+                    <div class="row">
+                        Price: $<%= data.price %>
+>>>>>>> product-page
                     </div>
                 </div>
                 <div class="col-12 col-md-7 col-lg-12">
@@ -189,7 +204,7 @@
                         </div>
                     </div>
                     <div class="row mb-5">
-                        <% locals.data.forEach(element => { %>
+                        <% productData.forEach(element => { %>
                             <div class="col-6 col-sm-3 col-md-2 mb-2">
                                 <%- include('./partials/shop-item') %>
                             </div>  
@@ -204,7 +219,7 @@
                         </div>
                     </div>
                     <div class="row">
-                      <% locals.data.forEach(element => { %>
+                      <% productData.forEach(element => { %>
                         <div class="col-6 col-sm-3 col-md-2 mb-2">
                             <%- include('./partials/shop-item') %>
                         </div>  
