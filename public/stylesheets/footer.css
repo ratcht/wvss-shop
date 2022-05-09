@@ -1,0 +1,12 @@
+.footer-wrap {
+    background-color: #222021;
+    margin-top: 10vw;
+}
+#foot-logo {
+    width: 100%;
+}
+.footer-links a {
+    color: aliceblue;
+    text-decoration: none;
+
+}

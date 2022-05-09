@@ -37,3 +37,7 @@ body {
     filter: brightness(80%);
     transition: filter 700ms;
 }
+.shop-item:hover #item-img {
+    filter: brightness(80%);
+    transition: filter 700ms;
+}
