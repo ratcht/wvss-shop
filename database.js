@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 const dotenv = require('dotenv').config();
 var conn = mysql.createConnection({
-  host: 'localhost', // Replace with your host name
+  host: '127.0.0.1', // Replace with your host name
   user: 'root',      // Replace with your database username
   password: 'BlueSmurf72@2021',      // Replace with your database password
   port: 3306,

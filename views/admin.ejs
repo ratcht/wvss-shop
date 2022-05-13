@@ -7,6 +7,94 @@
     <link rel="stylesheet" href="/stylesheets/admin.css">
 </head>
 <body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content"  style="background-color: #eCe7e5;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Item</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pb-4">
+              <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <b>Item Name:
+                        </b>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-6">
+                      <form action="">
+                          <input type="text" class="w-100">
+                      </form>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-4">
+                        <b>
+                            Item Type:
+                        </b>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <select class="form-select w-100 ms-1" name="type" id="item-type">
+                            <option value="1">Food</option>
+                            <option value="1">Clothing</option>
+                            <option value="1">Artwork</option>
+                            <option value="1">NFT Scam</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-3">
+                        <b>Price:</b>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-1">
+                        <b>CAD</b>
+                    </div>
+                    <div class="col-4">
+                        <form action="">
+                            <input type="text" class="w-100">
+                        </form>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-2">
+                        Options:
+                    </div>
+                    <div class="col-5"></div>
+                    <div class="col-5">
+                        <b>Extreme Burgir</b>
+                        <b class="pt-2">Extremist Burger</b>
+                        <b class="pt-2">Leftist Burgir</b>
+                        <button type="button" class="btn btn-secondary pt-2">Add Option</button>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-2">
+                        <b>Description</b>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-6">
+                        <div class="container-fluid" style="height: 100px;">
+                            <form action="">
+                                <textarea name="item-description" id="text-description" cols="30" rows="4" style="width: 100%;"></textarea>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="container-fluid d-flex justify-content-around">
+                <button type="button" class="btn btn-secondary">Preview</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="row justify-content-center">
         <div class="col-11 col-md-9 col-lg-7 pt-5">
             <div class="container-fluid mt-4 ps-0">
@@ -33,11 +121,11 @@
             <div class="container-fluid backcon justify-content-center">
                 <div class="row py-3 desc-line">
                     <div class="col-1"></div>
-                    <div class="col-2 caty">Title</div>
+                    <div class="col-3 caty">Title</div>
                     <div class="col-2 caty">Price</div>
                     <div class="col-3 caty">Description</div>
                     <div class="col-2 caty">Type</div>
-                    <div class="col-2"></div>
+                    <div class="col-1"></div>
                 </div>
                 <div class="row justify-content-between d-flex pt-3  desc-line">
                     <div class="col-1 catch">
@@ -45,13 +133,17 @@
                             <input class="form-check-input" type="checkbox" value="" id="checkitem1121">
                         </div>
                     </div>
-                    <div class="col-2 catc">
+                    <div class="col-3 catc">
                         <p>West Wan T-Shirt</p>
                     </div>
                     <div class="col-2 catc">$68.99</div>
                     <div class="col-3 catc">This Shirt is the official...</div>
                     <div class="col-2 catc">Clothing</div>
-                    <div class="col-2 catc"></div>
+                    <div class="col-1 catc editbtn">
+                        <button type="button btnb" data-bs-toggle="modal" data-bs-target="#editModal" style="border: 0px; background-color: transparent;">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-11">

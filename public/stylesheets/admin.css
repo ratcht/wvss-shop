@@ -19,3 +19,9 @@
     display: flex;
     justify-content: center; 
 }
+.editbtn {
+    font-size: 1.4rem;
+}
+.btnb {
+    border: 0px !important;
+}
