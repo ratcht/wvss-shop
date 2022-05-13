@@ -7,7 +7,7 @@ nav {
 nav.index {
     background-color: #eaeaea;
 }
-input {
+input .srch {
     border-radius: 2px;
     height: 50%;
     background-image: url('../assets/searchicon.png');

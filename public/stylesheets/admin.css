@@ -1,0 +1,21 @@
+.vlist li {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+.backcon {
+    background-color: #eCe7e5;
+    border-radius: 10px;
+}
+.caty {
+    display: flex;
+    justify-content: start;
+    font-weight: bold;
+}
+.catc {
+    display: flex;
+    justify-content: start;
+}
+.catch {
+    display: flex;
+    justify-content: center; 
+}

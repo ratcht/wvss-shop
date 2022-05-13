@@ -11,5 +11,11 @@ router.get('/product', function(req, res, next) {
 router.get('/orders', function(req, res, next) {
   res.render('orders', {title: 'Wvss Testing Crew'});
 });
+router.get('/admin', function(req, res, next) {
+  res.render('admin', {title: 'Admin Panel - wvss'});
+});
+router.get('/account', function(req, res, next) {
+  res.render('account', {title: 'Account Info - wvss'});
+});
 
 module.exports = router;

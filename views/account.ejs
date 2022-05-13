@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HELP</title>
+    <%- include('./partials/head') %> 
+    <%- include('./partials/navbar') %>
+    <link rel="stylesheet" href="/stylesheets/orders.css">
+</head>
+<body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">
+
+<div class="row justify-content-center">
+    <div class="col-11 col-md-9 col-lg-7 pt-5">
+        <div class="container-fluid mt-4 ps-0">
+            <h1><b>Your Account</b></h1>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-11 col-md-9 col-lg-7">
+        <hr>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-11 col-md-9 col-lg-7 pt-1">
+        <div class="row mt-4 fltr">
+            <div class="col-4 col-sm-4">
+                <div class="container d-flex align-items-center" onclick="location.href='/test/orders';" style="background-color: #e8e5e5;border-radius: 15px; min-height: 70px;min-width:60px; cursor: pointer;">
+                    <span class="d-none d-sm-inline-block me-2" style="background-color: #f1adad;border-radius:50%;height: 35px;width: 35px;"></span>
+                    <b>My orders</b>
+                </div>
+            </div>
+            <div class="col-4 col-sm-4">
+                <div class="container d-flex align-items-center" onclick="location.href='/test/orders';" style="background-color: #e8e5e5;border-radius: 15px; min-height: 70px;min-width:60px; cursor: pointer;">
+                    <span class="d-none d-sm-inline-block me-2" style="background-color: #f1adad;border-radius:50%;height: 35px;width: 35px;"></span>
+                    <b>Help</b>
+                </div>
+            </div>
+            <div class="col-4 col-sm-4">
+                <div class="container d-flex align-items-center" onclick="location.href='/test/orders';" style="background-color: #e8e5e5;border-radius: 15px; min-height: 70px;min-width:60px; cursor: pointer;">
+                    <span class="d-none d-sm-inline-block me-2" style="background-color: #f1adad;border-radius:50%;height: 35px;width: 35px;"></span>
+                    <b>About</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-11 col-md-9 col-lg-7 pt-4">
+        <div class="container-fluid pb-3 pt-2 px-0 mb-4" style="background-color: #ECE7E5; border-radius: 15px;">
+            <div class="container-fluid mx-2">
+                <div class="row d-flex justify-content-between mt-1">
+                    <div class="col">
+                        <b>
+                        Account Information
+                        </b>
+                    </div>
+                    <div class="col d-flex justify-content-end" style="font-size: 1.3rem;">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <p>First Name: Thomas</p>
+                </div>
+                <div class="row my-1">
+                    <p class="my-0">Last Name: Jefferson</p>
+                </div>
+                <div class="row">
+                    <p>Email: TJefferson@potus.gov</p>
+                </div>
+                <div class="row">
+                    <p>
+                        Phone Number: 1743 132 826
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer') %>
+<%- include('./partials/bootstrapscript') %>
+</body>
+</html>
