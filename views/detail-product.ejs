@@ -3,8 +3,7 @@
 <head>
     <title><%= title %></title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar') %>
-    <%  console.log(data.name);
+    <%- include('./partials/navbar-logged-in') %>
     %>
     <link rel="stylesheet" href="/stylesheets/detail-product.css">\
     <link
@@ -20,11 +19,7 @@
         <div class="container-fluid mt-5" style="width: 90% !important;">
             <div class="row">
                 <div class="col">
-<<<<<<< HEAD
-                    <a href="/test" style="text-decoration: none; color: black; "><i class="fa-solid fa-arrow-left"></i> Back to Results</a>
-=======
                     <a href="/products/categories" style="text-decoration: none; color: black; "><i class="fa-solid fa-arrow-left"></i> Back to Results</a>
->>>>>>> product-page
                 </div>
             </div>
             <div class="row mt-4">
@@ -85,18 +80,18 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 order-first order-md-0">
                     <div class="row">
-<<<<<<< HEAD
                         <h1>Random Artwork</h1>
-=======
-                        <%= data.name %>
->>>>>>> product-page
-                    </div>
+                     </div>
                     <div class="row">
                         <p>by Jamie Kang</p>
                     </div>
-<<<<<<< HEAD
+                    <div class="row d-none d-md-block">
+                        <p>This Hoodie was designed in 1915 by Jamie Kang as a part of the "Western Front" collection.
+                            He later released a second series in 1940.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-12 col-md-5 col-lg-3">
+                <div class="col-12 col-lg-5 col-xl-3">
                     <div class="container-fluid buy-cont">
                         <div class="row pb-2 pt-2">
                             <div class="col ms-1 av-label stock">
@@ -178,13 +173,9 @@
                                 <p style="color: gray;">Secure Transaction</p> 
                             </div>
                         </div>
-=======
-                    <div class="row">
-                        Price: $<%= data.price %>
->>>>>>> product-page
                     </div>
                 </div>
-                <div class="col-12 col-md-7 col-lg-12">
+                <div class="col-12 d-md-none">
                     <div class="row">
                         <h2>Description</h2>
                         <p>This is a hoodie designed by WVSS talented student Jamie Kang <br>
@@ -230,6 +221,7 @@
             </div>
         </div>
     </div>
+    <%- include('./partials/footer') %>
     <%- include('./partials/bootstrapscript') %>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 </body>

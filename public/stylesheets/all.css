@@ -37,3 +37,12 @@ body {
     filter: brightness(80%);
     transition: filter 700ms;
 }
+.footer-links a {
+    text-decoration: none;
+    color: aliceblue;
+    filter: brightness(80%);
+}
+.footer-links a:hover {
+    filter: brightness(100%);
+}
+
