@@ -19,7 +19,7 @@ input .srch {
 .nav-link {
     color: black;
 }
-.active {
+.active .actred{
     background-color: #b85143 !important;
 }
 .nav-item {
@@ -44,5 +44,9 @@ body {
 }
 .footer-links a:hover {
     filter: brightness(100%);
+}
+.sanitize-link-black {
+    text-decoration: none;
+    color: black;
 }
 

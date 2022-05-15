@@ -21,7 +21,31 @@
 }
 .editbtn {
     font-size: 1.4rem;
+    justify-content: center;
 }
-.btnb {
-    border: 0px !important;
+.tabbtn {
+    background-color: transparent !important;
+    color: gray;
 }
+
+
+.tabbtn.active{
+    border-bottom-color: black !important;
+    border-bottom-width: 2px;
+    color: black !important;
+}
+.file-text {
+    font-size: 0.6rem;
+    color: gray;
+}
+.option-con {
+    background-color: aliceblue;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+.button-sanitize {
+    border: none !important;
+    background-color: transparent !important;
+}
+
