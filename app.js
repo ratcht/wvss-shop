@@ -1,31 +1,54 @@
 var createError = require('http-errors');
 var express = require('express');
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+
+var session = require('express-session');
+var MySQLStore = require('express-mysql-session')(session);
+
+var options = {
+  host: 'localhost', // Replace with your host name
+  user: 'root',      // Replace with your database username
+  password: 'BlueSmurf72@2021',      // Replace with your database password
+  port: 3306,
+  database: 'wvss-shop' // // Replace with your database Name
+};
+
+var sessionStore = new MySQLStore(options);
+
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
-var individualProductRouter = require('./routes/individualProductRouter');
 var helpRouter = require('./routes/help');
 var aboutRouter = require('./routes/about');
 var testRouter = require('./routes/test')
-var loginRouter = require('./routes/login')
-var signupRouter = require('./routes/login')
+var userRouter = require('./routes/users')
 
 var app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+
+//session
+app.use(session({
+  secret: 'key that will sign cookie',
+  store: sessionStore,
+  resave: false,
+  saveUninitialized: false
+
+}))
+
+
 
 // view engine setup
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
-//app.use('/categories', productsRouter);
-//app.use('/products', individualProductRouter);
+app.use('/users', userRouter);
 app.use('/help', helpRouter);
 app.use('/about', aboutRouter);
 app.use('/test' , testRouter)
-app.use('/login' , loginRouter)
-app.use('/signup' , loginRouter)
-
 
 
 
@@ -37,8 +60,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

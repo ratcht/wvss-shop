@@ -5,32 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="stylesheets/signup.css">
+    <link rel="stylesheet" href="../stylesheets/signup.css">
     <title>Sign up - WVSS Shop</title>
 </head>
 <body>
     <header>
-        <img src="assets/mainlogo.png" alt="Lorem ipsum" class="logo"  onclick="location.href='/';" style="cursor: pointer;">
+        <img src="../assets/mainlogo.png" alt="Lorem ipsum" class="logo"  onclick="location.href='/';" style="cursor: pointer;">
     </header>
     <main>
         <section id="sign-in-window">
             <div id="sign-in-content">
                 <div id="sign-in-up">
                     <div id="sign-up-container"><p>Sign up</p></div>
-                    <div id="sign-in-container"  onclick="location.href='/login';" style="cursor: pointer;"><p>Log in</p></div>
+                    <div id="sign-in-container"  onclick="location.href='../users/login';" style="cursor: pointer;"><p>Log in</p></div>
                 </div>
                 <button id="google_signin">Continue with Google</button>
                 <div id="line-holder"><hr></div>
-                <input type="text" placeholder="First Name" autocomplete="given-name">
-                <input type="text" placeholder="Last Name" autocomplete="family-name">
-                <input type="text" placeholder="Email Adress" autocomplete="email">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
-                <div id="terms-container">
-                    <input type="checkbox">
-                    <p>By signing up, you agree to the Terms of Service and Privacy Policy</p>
-                </div>
-                <button id="sign-up-button">Sign up</button>
+                <form action = "/users/signupPOST" method = "POST">
+                    <input name = "fname"  type="text" placeholder="First Name" autocomplete="given-name">
+                    <input name = "lname" type="text" placeholder="Last Name" autocomplete="family-name">
+                    <input name = "username" type="text" placeholder="username" autocomplete="username">
+                    <input name = "email" type="text" placeholder="Email Address" autocomplete="email">
+                    <input name = "password" type="password" placeholder="Password">
+                    <div id="terms-container">
+                        <input type="checkbox">
+                        <p>By signing up, you agree to the Terms of Service and Privacy Policy</p>
+                    </div>
+                    <button id="sign-up-button">Sign up</button>
+                </form>
             </div>
         </section>
     </main>
