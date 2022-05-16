@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <%- include('./partials/head') %>
     <link rel="stylesheet" href="/stylesheets/signup.css">
+    <link rel="stylesheet" href="/stylesheets/all.css">
+    <%- include('./partials/navbar-logged-in') %>
     <title>Sign up - WVSS Shop</title>
 </head>
-<body>
-    <header>
-        <img src="/assets/mainlogo.png" alt="Lorem ipsum" class="logo"  onclick="location.href='/';" style="cursor: pointer;">
-    </header>
-    <main>
-        <section id="sign-in-window">
-            <div id="sign-in-content">
-                <div id="sign-in-up">
-                    <div id="sign-up-container"><p>Sign up</p></div>
-                    <div id="sign-in-container"  onclick="location.href='/login/login';" style="cursor: pointer;"><p>Log in</p></div>
-                </div>
-                <button id="google_signin">Continue with Google</button>
-                <div id="line-holder"><hr></div>
-                <input type="text" placeholder="First Name" autocomplete="given-name">
-                <input type="text" placeholder="Last Name" autocomplete="family-name">
-                <input type="text" placeholder="Email Adress" autocomplete="email">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
-                <div id="terms-container">
-                    <input type="checkbox">
-                    <p>By signing up, you agree to the Terms of Service and Privacy Policy</p>
-                </div>
-                <button id="sign-up-button">Sign up</button>
+<body class="mx-0 mt-3" style="height: auto; overflow-x: hidden;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <main>
+                    <section id="sign-in-window">
+                        <div id="sign-in-content">
+                            <div id="sign-in-up">
+                                <div id="sign-up-container"><p>Sign up</p></div>
+                                <div id="sign-in-container"  onclick="location.href='/login/login';" style="cursor: pointer;"><p>Log in</p></div>
+                            </div>
+                            <button id="google_signin">Continue with Google</button>
+                            <div id="line-holder"><hr></div>
+                            <input type="text" placeholder="First Name" autocomplete="given-name">
+                            <input type="text" placeholder="Last Name" autocomplete="family-name">
+                            <input type="text" placeholder="Email Adress" autocomplete="email">
+                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Confirm Password">
+                            <div id="terms-container">
+                                <input type="checkbox">
+                                <p>By signing up, you agree to the Terms of Service and Privacy Policy</p>
+                            </div>
+                            <button id="sign-up-button">Sign up</button>
+                        </div>
+                    </section>
+                </main>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>WVSS Shop - Designed and Implemented by the Programming Club</p>
-    </footer>
+        </div>
+    </div>
+    <%- include('./partials/footer') %>
+    <%- include('./partials/bootstrapscript') %>
 </body>
 </html>

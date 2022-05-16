@@ -1,13 +1,7 @@
 body {
     margin: 0%;
 }
-header {
-    height: 150px;
-    display: flex;
-    background-color: #b85143;
-    justify-content: center;
-    align-items: center;
-}
+
 img.logo {
     width: 140px;
     height: 140px;
@@ -20,13 +14,7 @@ main {
     font-family: Open Sans;
 
 }
-footer {
-    background-color: slategray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-}
+
 #sign-in-content {
     display: grid;
     grid-template-rows: repeat(2, 12%) 6% 12% 12% 1% 12%;

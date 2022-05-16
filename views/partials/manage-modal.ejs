@@ -2,7 +2,6 @@
   class="modal fade"
   id="editModal"
   tabindex="-1"
-  aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-lg">
@@ -57,7 +56,7 @@
                   aria-labelledby="home-tab"
                 >
                 <div class="container-fluid">
-                    <%- include('./food-modal-tab') %>
+                    <%- include('./art-modal-tab') %>
                 </div>
                 </div>
                 <div
@@ -76,7 +75,7 @@
 
       <div class="modal-footer">
         <div class="container-fluid d-flex justify-content-around">
-          <button type="button" class="btn btn-secondary">Preview</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#previewModal">Preview</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>

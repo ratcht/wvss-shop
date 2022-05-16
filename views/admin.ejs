@@ -5,10 +5,12 @@
     <%- include('./partials/head') %> 
     <%- include('./partials/navbar-logged-in') %>
     <link rel="stylesheet" href="/stylesheets/admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
 </head>
 <body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">
     <%- include('./partials/manage-modal') %>
     <%- include('./partials/stock-modal') %>
+    <%- include('./partials/preview-modal') %>
 
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -36,26 +38,26 @@
             <div class="col-11 col-md-9 col-lg-8 pt-1 mb-5 d-flex justify-content-center">
                 <div class="container-fluid backcon justify-content-center">
                     <div class="row py-3 desc-line">
-                        <div class="col-1 col-sm-1"></div>
-                        <div class="col-5 col-sm-3 caty">Name</div>
-                        <div class="col-4 col-sm-2 caty">Price</div>
-                        <div class="col-sm-3 caty d-none d-sm-block">Description</div>
-                        <div class="col-sm-1 caty d-none d-sm-block">Type</div>
-                        <div class="col-2 col-sm-2"></div>
+                        <div class="col-1 col-md-1"></div>
+                        <div class="col-5 col-md-3 caty">Name</div>
+                        <div class=" d-none d-md-block col-4 col-sm-2 caty">Price</div>
+                        <div class="col-sm-3 caty d-none d-md-block">Description</div>
+                        <div class="col-sm-1 caty d-none d-md-block">Type</div>
+                        <div class="col-2 col-md-2"></div>
                     </div>
                     <div class="row justify-content-between d-flex align-items-center pt-3  desc-line">
-                        <div class="col-1 col-sm-1 catch">
+                        <div class="col-1 col-md-1 catch">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="checkitem1121">
                             </div>
                         </div>
-                        <div class="col-5 col-sm-3 catc">
+                        <div class="col-5 col-md-3 catc">
                             <p>West Wan T-Shirt</p>
                         </div>
-                        <div class="col-4 col-sm-2 catc">$68.99</div>
-                        <div class="col-sm-3 catc d-none d-sm-block">This Shirt is the official...</div>
-                        <div class="col-sm-1 catc d-none d-sm-block">Clothing</div>
-                        <div class="col-12 col-xs-2 col-sm-2 catc editbtn d-flex justify-content-center">
+                        <div class="col-4 col-md-2 catc d-none d-md-block">$68.99</div>
+                        <div class="col-md-3 catc d-none d-md-block">This Shirt is the official...</div>
+                        <div class="col-md-1 catc d-none d-md-block">Clothing</div>
+                        <div class="col-5 col-xs-2 col-md-2 catc editbtn d-flex justify-content-center">
                             <button type="button" class="btnb p-0" data-bs-toggle="modal" data-bs-target="#editModal" style="border: 0px; background-color: transparent;">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button> 
@@ -76,5 +78,6 @@
 </div>
 <%- include('./partials/footer') %>
 <%- include('./partials/bootstrapscript') %>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 </body>
 </html>
