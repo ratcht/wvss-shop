@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HELP</title>
+    <%- include('./partials/head') %> 
+    <%- include('./partials/navbar-logged-in') %>
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+</head>
+<body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">
+    <%- include('./partials/manage-modal') %>
+    <%- include('./partials/stock-modal') %>
+    <%- include('./partials/preview-modal') %>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-9 col-lg-7 pt-5">
+                <div class="container-fluid mt-4 ps-0">
+                    <h1><b>Manage Shop</b></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-9 col-lg-7">
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-9 col-lg-7 pt-1 d-flex justify-content-end">
+                    <ul class="vlist">
+                        <li class="ps-5"><i class="fa-solid fa-filter"></i></li>
+                        <li class="ps-5"><i class="fa-solid fa-trash-can"></i></li>
+                        <li class="ps-5 pe-1"><i class="fa-solid fa-square-plus"></i></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-9 col-lg-8 pt-1 mb-5 d-flex justify-content-center">
+                <div class="container-fluid backcon justify-content-center">
+                    <div class="row py-3 desc-line">
+                        <div class="col-1 col-md-1"></div>
+                        <div class="col-5 col-md-3 caty">Name</div>
+                        <div class=" d-none d-md-block col-4 col-sm-2 caty">Price</div>
+                        <div class="col-sm-3 caty d-none d-md-block">Description</div>
+                        <div class="col-sm-1 caty d-none d-md-block">Type</div>
+                        <div class="col-2 col-md-2"></div>
+                    </div>
+                    <div class="row justify-content-between d-flex align-items-center pt-3  desc-line">
+                        <div class="col-1 col-md-1 catch">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkitem1121">
+                            </div>
+                        </div>
+                        <div class="col-5 col-md-3 catc">
+                            <p>West Wan T-Shirt</p>
+                        </div>
+                        <div class="col-4 col-md-2 catc d-none d-md-block">$68.99</div>
+                        <div class="col-md-3 catc d-none d-md-block">This Shirt is the official...</div>
+                        <div class="col-md-1 catc d-none d-md-block">Clothing</div>
+                        <div class="col-5 col-xs-2 col-md-2 catc editbtn d-flex justify-content-center">
+                            <button type="button" class="btnb p-0" data-bs-toggle="modal" data-bs-target="#editModal" style="border: 0px; background-color: transparent;">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button> 
+                            <button type="button" class=" btnb ms-2 p-0" data-bs-toggle="modal" data-bs-target="#addModal" style="border: 0px; background-color: transparent;">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-1"></div>
+                        <div class="col-11">
+                            <hr>
+                        </div>
+                    </div>     
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer') %>
+<%- include('./partials/bootstrapscript') %>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+</body>
+</html>

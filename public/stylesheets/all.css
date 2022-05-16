@@ -7,7 +7,7 @@ nav {
 nav.index {
     background-color: #eaeaea;
 }
-input {
+input .srch {
     border-radius: 2px;
     height: 50%;
     background-image: url('../assets/searchicon.png');
@@ -19,7 +19,7 @@ input {
 .nav-link {
     color: black;
 }
-.active {
+.active .actred{
     background-color: #b85143 !important;
 }
 .nav-item {
@@ -37,3 +37,19 @@ body {
     filter: brightness(80%);
     transition: filter 700ms;
 }
+.footer-links a {
+    text-decoration: none;
+    color: aliceblue;
+    filter: brightness(80%);
+}
+.footer-links a:hover {
+    filter: brightness(100%);
+}
+.sanitize-link-black {
+    color: black;
+    text-decoration: none;
+}
+.sanitize-link {
+    text-decoration: none;
+}
+

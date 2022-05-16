@@ -3,33 +3,40 @@
 <head>
     <title>HELP</title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar') %>
+    <%- include('./partials/navbar-logged-in') %>
 </head>
-<body class="mx-0 pt-5" style="height: 1400px; overflow-x: hidden;">
-<div id="carouselExampleSlidesOnly" class="carousel mx-0" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/SeaJacket.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-block">
-            <h1 style="font-size: 50px;">About</h1>
+<body class="mx-0 pt-5" style="height: auto; overflow-x: hidden;">
+<div class="container-fluid px-0">
+    <div id="carouselExampleSlidesOnly" class="carousel mx-0" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/SeaJacket.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-block">
+                <h1 style="font-size: 50px;">About</h1>
+            </div>
+        </div>
         </div>
     </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col-10 col-md-6">
+            <p>
+                WVSS Shop is the simple one-stop destination for all transactions between you and West Vancouver Secondary School. This includes educational payments, field trip expenses, school clothing, student artwork, and even club products.  
+            </p> 
+        </div>
     </div>
 </div>
-<div class="row justify-content-center mt-5">
-    <div class="col-10 col-md-6">
-        <p>
-            WVSS Shop is the simple one-stop destination for all transactions between you and West Vancouver Secondary School. This includes educational payments, field trip expenses, school clothing, student artwork, and even club products.  
-        </p> 
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col-10 col-md-6">
+            <p>
+                This site was developed by Jamie Kang (leader of the Programming and Business club), Ali Hamadani, and Hynek Lukeš.
+            </p> 
+        </div>
     </div>
 </div>
-<div class="row justify-content-center mt-5">
-    <div class="col-10 col-md-6">
-        <p>
-            This site was developed by Jamie Kang (leader of the Programming and Business club), Ali Hamadani, and Hynek Lukeš.
-        </p> 
-    </div>
-</div>
+<%- include('./partials/footer') %>
 <%- include('./partials/bootstrapscript') %>
 </body>
 </html>

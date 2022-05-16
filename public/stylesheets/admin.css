@@ -1,0 +1,51 @@
+.vlist li {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+.backcon {
+    background-color: #eCe7e5;
+    border-radius: 10px;
+}
+.caty {
+    display: flex;
+    justify-content: start;
+    font-weight: bold;
+}
+.catc {
+    display: flex;
+    justify-content: start;
+}
+.catch {
+    display: flex;
+    justify-content: center; 
+}
+.editbtn {
+    font-size: 1.4rem;
+    justify-content: center;
+}
+.tabbtn {
+    background-color: transparent !important;
+    color: gray;
+}
+
+
+.tabbtn.active{
+    border-bottom-color: black !important;
+    border-bottom-width: 2px;
+    color: black !important;
+}
+.file-text {
+    font-size: 0.6rem;
+    color: gray;
+}
+.option-con {
+    background-color: #C4C4C4;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+.button-sanitize {
+    border: none !important;
+    background-color: transparent !important;
+}
+

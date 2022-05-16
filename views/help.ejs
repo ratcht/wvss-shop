@@ -3,24 +3,26 @@
 <head>
     <title>HELP</title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar') %>
+    <%- include('./partials/navbar-signed-out') %>
 </head>
-<body class="pt-4 pt-md-5 mt-4" style="height: 2000px; font-family: Open Sans; overflow-x: hidden;">
-    <div id="carouselExampleSlidesOnly" class="carousel mx-0" data-bs-ride="carousel" style="width: 100vw;">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/SeaJacket.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block">
-                <h1 style="font-size: 50px;">Help</h1>
+<body class="pt-4 pt-md-5 mt-4" style="height: auto; font-family: Open Sans; overflow-x: hidden;">
+    <div class="container-fluid px-0">
+        <div id="carouselExampleSlidesOnly" class="carousel mx-0" data-bs-ride="carousel" style="width: 100%;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/SeaJacket.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-block">
+                    <h1 style="font-size: 50px;">Help</h1>
+                </div>
             </div>
-        </div>
+            </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10 mt-5">
+            <div class="col-12  col-md-10 mt-5">
                 <div class="row justify-content-center">
-                    <div class="col-10 col-md-8" style="font-size: 16;">
+                    <div class="col-10 col-md-10 col-lg-8 px-0" style="font-size: 16;">
                         
                         <div class="row justify-content-center">
                             <div class="col d-flex justify-content-center my-5" style="font-size: 25px;">
@@ -28,18 +30,30 @@
                             </div>
                         </div>
                         
-                        <div class="row d-flex justify-content-between mb-3 mt-4">
-                            <div class="col-6 col-sm-5">
-                                <div class="container d-flex align-items-center" onclick="location.href='/test/orders';" style="background-color: #e8e5e5;border-radius: 15px; min-height: 70px;min-width:60px; cursor: pointer;">
-                                    <span class="d-none d-sm-inline-block me-2" style="background-color: #f1adad;border-radius:50%;height: 35px;width: 35px;"></span>
-                                    <b>My orders</b>
-                                </div>
+                        <div class="row d-flex justify-content-center mb-3 mt-4">
+                            <div class="col-6 col-sm-4 mt-1">
+                                <a href="/test/orders" class="sanitize-link-black">
+                                    <div class="container d-flex align-items-center" style="background-color: #e8e5e5;border-radius: 15px;  min-height: 70px; min-width:60px; cursor: pointer; white-space: nowrap;">
+                                        <span class="d-none d-sm-inline-block me-2" style="background-color: #99c4f7;border-radius:50%;height: 35px;width: 35px;"></span>
+                                        <b>My Orders</b>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="col-6 col-sm-5">
-                                <div class="container d-flex align-items-center" onclick="location.href='/';" style="background-color: #e8e5e5;border-radius: 15px;  min-height: 70px; min-width:60px; cursor: pointer;">
-                                    <span class="d-none d-sm-inline-block me-2" style="background-color: #99c4f7;border-radius:50%;height: 35px;width: 35px;"></span>
-                                    <b>Send us an email</b>
-                                </div>
+                            <div class="col-6 col-sm-4 mt-1">
+                                <a href="/test/account" class="sanitize-link-black">
+                                    <div class="container d-flex align-items-center" style="background-color: #e8e5e5;border-radius: 15px;  min-height: 70px; min-width:60px; cursor: pointer; white-space: nowrap">
+                                        <span class="d-none d-sm-inline-block me-2" style="background-color: #99c4f7;border-radius:50%;height: 35px;width: 35px;"></span>
+                                        <b>My Account</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8 col-sm-4 mt-1">
+                                <a href="mailto:support@gmail.com" class="sanitize-link-black">
+                                    <div class="container d-flex align-items-center" style="background-color: #e8e5e5;border-radius: 15px;  min-height: 70px; min-width:60px; cursor: pointer; white-space: nowrap">
+                                        <span class="d-none d-sm-inline-block me-2" style="background-color: #99c4f7;border-radius:50%;height: 35px;width: 35px;"></span>
+                                        <b>Send us an email</b>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
@@ -50,7 +64,7 @@
                         </div>
 
                         <div class="row mt-5 py-3" style="background-color: #e8e5e5; border-radius: 10px;">
-                            <div class="col">
+                            <div class="col px-0">
                                 <div class="container justify-content-center" data-bs-toggle="collapse" href="#collapseQ1" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <b>How do I pick up my order?</b>
                                 </div>
@@ -99,6 +113,6 @@
             </div>
         </div>
     </div>
-    
+<%- include('./partials/footer') %>
 <%- include('./partials/bootstrapscript') %>
 </html>
