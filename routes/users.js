@@ -17,11 +17,17 @@ router.post('/', (req, res) => {
 })
 
 router.get('/login', function(req, res, next) {
-  res.render('login');
+  if (req.session.isAuth) {
+    return res.redirect('/home');
+  }
+  res.render('login', {isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
 
 router.get('/signup', function(req, res, next) {
-  res.render('signup');
+  if (req.session.isAuth) {
+    return res.redirect('/home');
+  }
+  res.render('signup', {isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
 
 router.post('/loginPOST', async (req, res, next) =>{
@@ -49,6 +55,12 @@ router.post('/loginPOST', async (req, res, next) =>{
     }
     console.log("logged");
     req.session.isAuth = true;
+
+    if (user.id == 130){
+      req.session.isAdminAuth = true;
+    }
+
+    req.session.userInfo = user;
     return res.redirect("/home");
   });
 
@@ -57,7 +69,9 @@ router.post('/loginPOST', async (req, res, next) =>{
 });
 
 router.get('/logout', function(req, res, next) {
-  req.session.isAuth = false;
+  req.session.destroy((err) => {
+    if (err) throw err;
+  });
   return res.redirect('/users/login');
 });
 

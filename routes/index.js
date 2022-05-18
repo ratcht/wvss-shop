@@ -12,7 +12,8 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/home', function(req, res, next) {
-  res.render('index', { data: ['lol1','lol2','s','sss','ff','cdf'], title: 'Wvss Shop - Home'});
+  console.log("index");
+  res.render('index', { data: ['lol1','lol2','s','sss','ff','cdf'], title: 'Wvss Shop - Home', isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
 
 

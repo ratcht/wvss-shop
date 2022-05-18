@@ -42,14 +42,16 @@
     <a class="nav-link dropdown-toggle" href="#" id="userToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgba(255,255,255,.55);">
         
             <i class="fa-regular fa-circle-user"></i>
-            <b style="font-size: 0.8rem;">Hynek Lukeš</b>
+            <b style="font-size: 0.8rem;"><%=userInfo.fname%></b>
         
     </a>
     <ul class="dropdown-menu" aria-labelledby="userToggle" style="background-color: #ECE7E5;">
         <li><a class="dropdown-item" href="/test/account">My Account</a></li>
         <li><a class="dropdown-item" href="/test/orders">My orders</a></li>
+        <% if (userInfo.id == 130) { %>
         <li> <a href="/test/admin" class="dropdown-item">Admin Panel</a></li>
-        <li> <a href="/test/admin" class="nav-link">Log out</a></li>
+        <% } %>
+        <li> <a href="/users/logout" class="nav-link">Log out</a></li>
     </ul>
 </div>
 <div 

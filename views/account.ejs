@@ -3,7 +3,13 @@
 <head>
     <title>HELP</title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar-logged-in') %>
+    <% if(locals.isAuthed == true){%>
+        <% console.log(locals.user)%>
+    <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
+    <%  } else {%>
+    <%-     include('./partials/navbar-signed-out')%>
+    <%  } %>
+    <%- include('./partials/index-navbar') %>
     <link rel="stylesheet" href="/stylesheets/orders.css">
 </head>
 <body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">

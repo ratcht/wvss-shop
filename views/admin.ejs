@@ -3,7 +3,12 @@
 <head>
     <title>HELP</title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar-logged-in') %>
+    <% if(locals.isAuthed == true){%>
+        <% console.log(locals.user)%>
+    <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
+    <%  } else {%>
+    <%-     include('./partials/navbar-signed-out')%>
+    <%  } %>
     <link rel="stylesheet" href="/stylesheets/admin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
 </head>

@@ -1,39 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="../stylesheets/login.css">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <title>Log in - WVSS Shop</title>
-</head>
-<body>
-    <header>
-        <img src="../assets/mainlogo.png" alt="Lorem ipsum" class="logo"  onclick="location.href='/';" style="cursor: pointer;">
-    </header>
-=======
     <%- include('./partials/head') %>
     <link rel="stylesheet" href="/stylesheets/login.css">
     <link rel="stylesheet" href="/stylesheets/all.css">
-    <%- include('./partials/navbar-logged-in') %>
+    <% console.log(locals.isAuthed);%>
+    <% if(locals.isAuthed == true){%>
+    <%-    include('./partials/navbar-logged-in',{userInfo : locals.userInfo} )%>
+    <%  } else {%>
+    <%-     include('./partials/navbar-signed-out')%>
+    <%  } %>
+    <%- include('./partials/index-navbar') %>
     <title>Log in - WVSS Shop</title>
 </head>
 <body class="mx-0 mt-3" style="height: auto; overflow-x: hidden;">
->>>>>>> origin/fixed-ali-commit
     <main>
         <section id="sign-in-window">
             <div id="sign-in-content">
                 <div id="sign-in-up">
-<<<<<<< HEAD
                     <div id="sign-up-container" onclick="location.href='../users/signup';" style="cursor: pointer;"><p>Sign up</p></div>
-=======
-                    <div id="sign-up-container" onclick="location.href='/signup/signup';" style="cursor: pointer;"><p>Sign up</p></div>
->>>>>>> origin/fixed-ali-commit
                     <div id="sign-in-container"><p>Log in</p></div>
                 </div>
                 <button id="google_signin">Continue with Google</button>
@@ -48,7 +33,6 @@
             </div>
         </section>
     </main>
-<<<<<<< HEAD
     <footer>
         <p>WVSS Shop - Made by the Programming club</p>
     </footer>
@@ -68,9 +52,5 @@
           console.log("ID Token: " + id_token);
         }
       </script>
-=======
-    <%- include('./partials/footer') %>
-    <%- include('./partials/bootstrapscript') %>
->>>>>>> origin/fixed-ali-commit
 </body>
 </html>

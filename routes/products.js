@@ -13,7 +13,7 @@ router.get('/categories', function(req, res, next) {
     var sql='SELECT * FROM primaryproducts';
     db.query(sql, function (err, data, fields) {
     if (err) throw err;
-    res.render('productpage-test', { title: 'Product List', productData: data});
+    res.render('productpage-test', { title: 'Product List', productData: data, isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
 });
 
@@ -33,7 +33,7 @@ router.get('/item/:tagId', function(req, res, next) {
         return res.redirect('/categories');
 
     } else {
-        res.render('detail-product', { title: 'Product', data: data2[0], productData: data1 });
+        res.render('detail-product', { title: 'Product', data: data2[0], productData: data1, isAuthed: req.session.isAuth, user: req.session.userInfo });
     }
     
     
@@ -51,7 +51,7 @@ router.get('/search', function(req, res) {
     var sql='SELECT * FROM primaryproducts WHERE name LIKE '+db.escape('%'+term+'%');
       db.query(sql, function (err, data, fields) {
       if (err) throw err;
-      res.render('productpage-test', { title: 'Product List', productData: data});
+      res.render('productpage-test', { title: 'Product List', productData: data, isAuthed: req.session.isAuth, user: req.session.userInfo});
     });
   
   

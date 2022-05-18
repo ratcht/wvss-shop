@@ -3,8 +3,13 @@
 <head>
     <title><%= title %></title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar-logged-in') %>
-    %>
+    <% if(locals.isAuthed == true){%>
+        <% console.log(locals.user)%>
+    <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
+    <%  } else {%>
+    <%-     include('./partials/navbar-signed-out')%>
+    <%  } %>
+    <%- include('./partials/index-navbar') %>
     <link rel="stylesheet" href="/stylesheets/detail-product.css">\
     <link
     rel="stylesheet"
@@ -197,7 +202,7 @@
                     <div class="row mb-5">
                         <% productData.forEach(element => { %>
                             <div class="col-6 col-sm-3 col-md-2 mb-2">
-                                <%- include('./partials/shop-item') %>
+                                <%- include('./partials/shop-item' , {element: element} ); %>
                             </div>  
                         <% }) %>
                     </div>
@@ -212,7 +217,7 @@
                     <div class="row">
                       <% productData.forEach(element => { %>
                         <div class="col-6 col-sm-3 col-md-2 mb-2">
-                            <%- include('./partials/shop-item') %>
+                            <%- include('./partials/shop-item' , {element: element}); %>
                         </div>  
                     <% }) %>
                     </div>   

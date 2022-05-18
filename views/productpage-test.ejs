@@ -3,7 +3,13 @@
 <head>
     <title><%= title %></title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar') %>
+    <% if(locals.isAuthed == true){%>
+        <% console.log(locals.user)%>
+    <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
+    <%  } else {%>
+    <%-     include('./partials/navbar-signed-out')%>
+    <%  } %>
+    <%- include('./partials/index-navbar') %>
 
 </head>
 
@@ -16,7 +22,7 @@
                         <% productData.forEach(element => { %>
                                 <div class="col-sm-3 col-md-3 mb-2" >
                                     <a href="item/<%=element.sku%>">
-                                        <%- include('./partials/shop-item') %>
+                                        <%- include('./partials/shop-item', {element: element}); %>
                                     </a>
 
                                 </div>  

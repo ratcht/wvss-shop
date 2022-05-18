@@ -3,7 +3,12 @@
 <head>
     <title><%= title %></title>
     <%- include('./partials/head') %> 
-    <%- include('./partials/navbar-logged-in') %>
+    <% if(locals.isAuthed == true){%>
+        <% console.log(locals.user)%>
+    <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
+    <%  } else {%>
+    <%-     include('./partials/navbar-signed-out')%>
+    <%  } %>
     <%- include('./partials/index-navbar') %>
 
 </head>
@@ -19,13 +24,13 @@
                             <b style="white-space: nowrap;">Featured Products</b>
                         </div>
                         <div class="col-2 d-flex justify-content-end mb-4">
-                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="/products" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="row mb-5">
                         <% locals.data.forEach(element => { %>
                             <div class="col-6 col-sm-3 col-md-2 mb-2">
-                                <%- include('./partials/shop-item') %>
+                                <%- include('./partials/shop-item', {element: element}) %>
                             </div>  
                         <% }) %>
                     </div>
@@ -34,13 +39,13 @@
                             <b style="white-space: nowrap;">Trending Clothing</b>
                         </div>
                         <div class="col-2 d-flex justify-content-end mb-4">
-                            <a href="/test" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="/products" style="white-space: nowrap; color: brown; text-decoration: none;"> See more <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="row">
                       <% locals.data.forEach(element => { %>
                         <div class="col-6 col-sm-3 col-md-2 mb-2">
-                            <%- include('./partials/shop-item') %>
+                            <%- include('./partials/shop-item', {element: element}) %>
                         </div>  
                     <% }) %>
                     </div>   
