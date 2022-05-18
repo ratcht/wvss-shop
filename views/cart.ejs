@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cart</title>
+    <%- include('./partials/head') %> 
+    <%- include('./partials/navbar-logged-in') %>
+    <link rel="stylesheet" href="/stylesheets/cart.css">
+</head>
+<body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-lg-9 pt-5">
+            <div class="container-fluid mt-4 ps-0">
+                <h1><b>Shopping Cart</b></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-lg-9">
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-lg-9 pt-4">
+            <div class="row">
+                <div class="col-12 col-md-9">
+                    <div class="container-fluid pb-3 pt-2 px-0 mb-4" style="background-color: #ECE7E5; border-radius: 15px;">
+                        <div class="container-fluid me-2">
+                            <div class="row justify-content-end">
+                                <div class="col-2 pe-2 d-flex justify-content-end">
+                                    Price
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-3 px-0">
+                                    <img src="/assets/item-example.jpg" alt="item-item" class="w-100 ms-3 mt-1" style="border-radius: 12px;">
+                                </div>
+                                <div class="col-7">
+                                    <div class="container">
+                                        <b>Expensive Painting</b>
+                                    </div>
+                                    <div class="container">
+                                        Description
+                                    </div>
+                                    <div class="container d-inline-block">
+                                        <div class="row align-items-center pt-3">
+                                            <div class="col-12 col-sm-3">
+                                                <b>Quantity:</b>
+                                            </div>
+                                            <div class="col-6 col-sm-3 ps-0">
+                                                <input type="number" class="form-control" min="0" step="1" value="0">
+                                            </div>
+                                            <div class="col">
+                                                Delete
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2 pt-2 pe-2 d-flex justify-content-end">
+                                    <b>$20</b>
+                                </div>
+                                <div class="container-fluid">
+                                    <hr class="me-1">
+                                </div>
+                                <div class="row justify-content-end">
+                                    <div class="col-12 me-2 d-flex justify-content-end">
+                                        Subtotal (2 Items) : $40.23
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 order-first order-md-last">
+                    <div class="container-fluid pb-3 pt-2 px-0 mb-4" style="background-color: #ECE7E5; border-radius: 15px;">
+                        <div class="row justify-content-center pt-2">
+                            <div class="col-12 d-flex justify-content-center">
+                                Subtotal (2 Items):
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                $40.23
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col d-flex justify-content-center pt-3 pb-3">
+                                <button type="button" class="btn btn-primary btn-checkout">Proceed to checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer') %>
+<%- include('./partials/bootstrapscript') %>
+</body>
+</html>
