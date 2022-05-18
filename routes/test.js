@@ -24,5 +24,9 @@ router.get('/admin', function(req, res, next) {
 router.get('/account', function(req, res, next) {
   res.render('account', {title: 'Account Info - wvss', isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
+router.get('/cart', function(req, res, next) {
+  res.render('cart', {title: 'Your Cart'});
+});
+
 
 module.exports = router;
