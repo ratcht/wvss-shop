@@ -49,3 +49,11 @@
     background-color: transparent !important;
 }
 
+.show.dropaddmenu {
+    display: flex;
+    flex-direction: column;
+}
+.btnb {
+    background-color: transparent;
+    border: 0px;
+}

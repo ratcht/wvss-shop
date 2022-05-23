@@ -1,6 +1,6 @@
 <div
   class="modal fade"
-  id="editModal"
+  id="addItemFoodModal"
   tabindex="-1"
   aria-hidden="true"
 >
@@ -30,23 +30,10 @@
                     aria-controls="edit"
                     aria-selected="true"
                   >
-                    <b>Edit</b>
+                    <b>Add</b>
                   </button>
                 </li>
-                <li class="nav-item bstab" role="presentation">
-                  <button
-                    class="nav-link tabbtn"
-                    id="stock-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#profile"
-                    type="button"
-                    role="tab"
-                    aria-controls="stock"
-                    aria-selected="false"
-                  >
-                  <b>Stock</b>
-                  </button>
-                </li>
+
               </ul>
               <div class="tab-content" id="myTabContent">
                 <div
@@ -56,16 +43,8 @@
                   aria-labelledby="home-tab"
                 >
                 <div class="container-fluid"> 
-                    <%- include('./clothing-modal-tab') %>
+                    <%- include('./food-modal-tab') %>
                 </div>
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="profile"
-                  role="tabpanel"
-                  aria-labelledby="profile-tab"
-                >
-                    <%- include('./stock-modal-tab') %>
                 </div>
               </div>
             </div>

@@ -14,6 +14,9 @@
 </head>
 <body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">
     <%- include('./partials/manage-modal') %>
+    <%- include('./partials/add-art-modal') %>
+    <%- include('./partials/add-food-modal') %>
+    <%- include('./partials/add-clothing-modal') %>
     <%- include('./partials/stock-modal') %>
     <%- include('./partials/preview-modal') %>
 
@@ -36,9 +39,16 @@
                         <li class="ps-5"><i class="fa-solid fa-filter"></i></li>
                         <li class="ps-5"><i class="fa-solid fa-trash-can"></i></li>
                         <li class="ps-5 pe-1">
-                            <button type="button" class="btnb p-0" data-bs-toggle="modal" data-bs-target="#editModal" style="border: 0px; background-color: transparent;">
-                                <i class="fa-solid fa-square-plus"></i>
-                            </button> 
+                            <div class="dropdown">
+                                <button type="button" class=" btnb p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-square-plus"></i>
+                                </button>
+                                <ul class="dropdown-menu dropaddmenu" aria-labelledby="dropdownAddButton">
+                                    <li><button class="dropdown-item" id="dropdownAddButton" data-bs-toggle="modal" data-bs-target="#addItemArtModal"><b>Art</b></button></li>
+                                    <li><button class="dropdown-item" id="dropdownAddButton" data-bs-toggle="modal" data-bs-target="#addItemFoodModal"><b>Food</b></button></li>
+                                    <li><button class="dropdown-item" id="dropdownAddButton" data-bs-toggle="modal" data-bs-target="#addItemClothingModal"><b>Clothing</b></button></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
             </div>
@@ -71,7 +81,7 @@
                             <button type="button" class="btnb p-0" data-bs-toggle="modal" data-bs-target="#editModal" style="border: 0px; background-color: transparent;">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button> 
-                            <button type="button" class=" btnb ms-2 p-0" data-bs-toggle="modal" data-bs-target="#addModal" style="border: 0px; background-color: transparent;">
+                            <button type="button" class=" btnb ms-2 p-0" data-bs-toggle="modal" data-bs-target="#addStockModal" style="border: 0px; background-color: transparent;">
                                 <i class="fa-solid fa-boxes-stacked"></i>
                             </button>
                         </div>

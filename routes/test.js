@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var db=require('../database');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,7 +14,13 @@ router.get('/orders', function(req, res, next) {
 });
 router.get('/admin', function(req, res, next) {
   if (req.session.isAdminAuth) {
-    res.render('admin', {title: 'Admin Panel - wvss', isAuthed: req.session.isAuth, user: req.session.userInfo});
+    
+
+    var sql='SELECT * FROM primaryproducts';
+    db.query(sql, function (err, data, fields) {
+    if (err) throw err;
+    res.render('admin', { title: 'Admin Panel - wvss', productData: data, isAuthed: req.session.isAuth, user: req.session.userInfo});
+    });
   }
   else {
     return res.redirect('../users/login');
