@@ -1,4 +1,4 @@
-<form action="/xd">
+<form action="/test/uploadproduct" method="POST" id="form1">
     <div class="row pt-4">
         <div class="col-12 col-md-6">
             <div class="row justify-content-around align-items-center pb-3">
@@ -6,7 +6,7 @@
                     <b>Item Name:</b>
                 </div>
                 <div class="col-7">
-                    <input type="text" class="w-100 form-control" />
+                    <input name="productName" type="text" class="w-100 form-control" />
                 </div>
             </div>
             <div class="row justify-content-around align-items-center mb-3">
@@ -16,7 +16,7 @@
                 <div class="col-7 align-items-center">
                     <div class="input-group">
                         <span class="input-group-text" id="cad-info">CAD</span>
-                            <input type="number" min="0" step="any" class="form-control" id="price-input"/>
+                            <input name="productPrice" type="number" min="0" step="any" class="form-control" id="price-input"/>
                     </div>
                 </div>
             </div>
@@ -142,4 +142,12 @@
             </div>
         </div>
     </div>
+
+    <div class="modal-footer">
+        <div class="container-fluid d-flex justify-content-around">
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#previewModal">Preview</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
 </form>
+<button type="submit" form="form1" value="Submit">Submit</button>

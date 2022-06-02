@@ -28,6 +28,25 @@ router.get('/admin', function(req, res, next) {
   }
 
 });
+
+router.post('/uploadproduct', async (req, res, next) => {
+  console.log("hi");
+
+  console.log(req.body.productName);
+
+  var sku = Math.floor(100000 + Math.random() * 900000);
+  //insert values
+  if(req.body.productName !== null && req.body.price !== null) {
+    var insertSql='INSERT INTO primaryproducts (sku, name, price) VALUES ('+db.escape(sku)+', '+db.escape(req.body.productName)+', '+db.escape(req.body.productPrice)+');';
+    db.query(insertSql, async (err, data, fields) => {
+      if (err) throw err;
+    });
+  }
+
+  
+});
+
+
 router.get('/account', function(req, res, next) {
   res.render('account', {title: 'Account Info - wvss', isAuthed: req.session.isAuth, user: req.session.userInfo});
 });

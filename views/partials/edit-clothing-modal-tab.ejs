@@ -1,0 +1,145 @@
+<form action="/xd">
+  <div class="row pt-4">
+      <div class="col-12 col-md-6">
+          <div class="row justify-content-around align-items-center pb-3">
+              <div class="col-5">
+                  <b>Item Name:</b>
+              </div>
+              <div class="col-7">
+                  <input type="text" class="w-100 form-control" />
+              </div>
+          </div>
+          <div class="row justify-content-around align-items-center mb-3">
+              <div class="col-5">
+                  <label for="price-input"><b>Price:</b></label>
+              </div>
+              <div class="col-7 align-items-center">
+                  <div class="input-group">
+                      <span class="input-group-text" id="cad-info">CAD</span>
+                          <input type="number" min="0" step="any" class="form-control" id="price-input"/>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-12 col-md-6">
+          <div class="row justify-content-around align-items-center pb-3">
+              <div class="col-5">
+                  <b>Images:</b>
+              </div>
+              <div class="col-7 justify-content-center">
+                  <label for="xd" class="pb-1">Add Image</label>
+                  <input type="file" name="image-sumbit" id="xd" class="mb-2 form-control form-control-sm">
+                  <button type="submit" class="btn btn-dark btn-sm">
+                      Submit Image
+                  </button>
+              </div>
+          </div>
+          <div class="row justify-content-start align-items-center pb-3">
+              <p class="file-text mb-1">downloadedjpg.jpg</p>
+              <p class="file-text mb-1">downloadedjpg(1).jpg</p>
+              <p class="file-text mb-1">downloadedjpg(2).jpg</p>
+          </div>
+      </div>
+  </div>
+  <div class="row mb-2">
+      <div class="col-12 col-md-6">
+          <div class="row">
+              <div class="col">
+                  <label for="button-addsize2"><b>Color:</b></label>
+              </div>
+              <div class="col-8">
+                  
+                  <form action="" class="w-100 p-0 m-0">
+                      <div class="input-group">
+                          <input type="text" class="form-control form-control-sm w-50" placeholder="New Color" aria-label="New color name">
+                          <input type="color" class="form-control form-control-sm"  aria-label="New Color" aria-describedby="add-color-button">
+                          <button class="btn btn-secondary btn-sm" type="button" id="button-addon2"><i class="fa-solid fa-circle-plus"></i></button>
+                      </div>
+                  </form>
+                  
+              </div>
+          </div>
+      </div>
+      
+  </div>
+  <div class="row pb-5">
+      <div class="col">
+          <div class="row align-items-center">
+              <div class="col-sm-4 col-md-4 col-lg-3 col-5 px-0 mb-2 me-1 mb-2justify-content-center d-flex align-items-center">
+                  <div class="container d-flex justify-content-center option-con"  style="background-color: #99c4f7;">
+                      <div class="form-check my-0">
+                          <input class="form-check-input" type="checkbox" value="" id="color1check">
+                          <label class="form-check-label d-flex align-items-center" for="colorcheck1">
+                              Heather Blue
+                          </label>
+                        </div>
+                      <button type="button" class="btn-close ps-3 ms-1" aria-label="Delete Option"></button>
+                  </div>
+              </div>
+              
+              
+              
+          </div>
+          
+
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-12 col-md-6">
+          <div class="row">
+              <div class="col">
+                  <label for="button-addsize2"><b>Size:</b></label>
+              </div>
+              <div class="col">
+                  
+                  <form action="" class="w-100 p-0 m-0">
+                      <div class="input-group">
+                          <input type="text" class="form-control form-control-sm" placeholder="New Size" aria-label="New Option" aria-describedby="add-size-button">
+                          <button class="btn btn-secondary btn-sm" type="button" id="button-addon2"><i class="fa-solid fa-circle-plus"></i></button>
+                      </div>
+                  </form>
+                  
+              </div>
+          </div>
+      </div>
+      
+  </div>
+  <div class="row pb-5">
+      <div class="col">
+          <div class="row align-items-center">
+              <div class="col-sm-4 col-md-3 col-lg-2 col-5 p-2 m-2 justify-content-center align-items-center">
+                  <div class="container d-flex justify-content-center option-con">
+                      <b>S</b>
+                      <button type="button" class="btn-close ps-3 ms-1" aria-label="Delete Option"></button>
+                  </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2 col-5 p-2 m-2 justify-content-center align-items-center">
+                  <div class="container d-flex justify-content-center option-con">
+                      <b>M</b>
+                      <button type="button" class="btn-close ps-3 ms-1" aria-label="Delete Option"></button>
+                  </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2 col-5 p-2 m-2 justify-content-center align-items-center">
+                  <div class="container d-flex justify-content-center option-con">
+                      <b>21*22</b>
+                      <button type="button" class="btn-close ps-3 ms-1" aria-label="Delete Option"></button>
+                  </div>
+              </div>
+              
+              
+          </div>
+
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="row">
+              <b>Description</b>
+          </div>
+
+          <div class="row">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+      </div>
+  </div>
+</form>
