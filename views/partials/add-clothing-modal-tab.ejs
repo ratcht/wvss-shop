@@ -14,12 +14,20 @@
                     <b>Clothing Type:</b>
                 </div>
                 <div class="col">
-                    <select class="form-select w-100 ms-1" name="type" id="clothing-type">
-                        <option value="tshirt">T-Shirt</option>
-                        <option value="hoodie">Hoodie</option>
-                        <option value="hat">Hat</option>
-                        <option value="nftscam">NFT Scam</option>
+                    <select name="productType" class="form-select w-100 ms-1" id="clothing-type">
+                        <option value="T-Shirt">T-Shirt</option>
+                        <option value="Sweatshirt">Sweatshirt</option>
+                        <option value="Hat">Hat</option>
+                        <option value="Other">Other</option>
                     </select>
+                </div>
+            </div>
+            <div class="row justify-content-around align-items-center pb-3">
+                <div class="col-5">
+                    <b>Description:</b>
+                </div>
+                <div class="col-7">
+                    <textarea name="productD" class="w-100 form-control" row="3"></textarea>
                 </div>
             </div>
             <div class="row justify-content-around align-items-center mb-3">
@@ -144,23 +152,12 @@
 
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <div class="row">
-                <b>Description</b>
-            </div>
-
-            <div class="row">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-        </div>
-    </div>
-
+</form>
     <div class="modal-footer">
         <div class="container-fluid d-flex justify-content-around">
           <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#previewModal">Preview</button>
-          <button class="btn btn-primary">Save changes</button>
+          <button class="btn btn-primary" type="submit" form="form1" value="Submit">Submit</button>
         </div>
       </div>
-</form>
-<button type="submit" form="form1" value="Submit">Submit</button>
+
+

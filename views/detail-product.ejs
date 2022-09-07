@@ -4,7 +4,6 @@
     <title><%= title %></title>
     <%- include('./partials/head') %> 
     <% if(locals.isAuthed == true){%>
-        <% console.log(locals.user)%>
     <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
     <%  } else {%>
     <%-     include('./partials/navbar-signed-out')%>
@@ -96,6 +95,8 @@
                         </p>
                     </div>
                 </div>
+    <!----------------- form ----------------->
+                <form action = "/cart/add/<%= data.sku %>" method = "POST">
                 <div class="col-12 col-lg-5 col-xl-3">
                     <div class="container-fluid buy-cont">
                         <div class="row pb-2 pt-2">
@@ -105,7 +106,8 @@
                         </div>
                         <div class="row pb-2">
                             <div class="col ms-1">
-                                <b>Color Name: Blue Heather</b>
+                                <b>
+                                <p id="color-name">Color: Blue Heather</p></b>
                             </div>
                         </div>
                         <div class="row pb-2">
@@ -113,19 +115,19 @@
                                 <ul class="ps-1  my-0">
                                     <li class="pe-1">
                                         <label>
-                                            <input type="radio" name="color" value="Blue Heather" class="d-none">
+                                            <input type="radio" name="color" value="Blue Heather" class="d-none" checked="checked">
                                             <span class="colorex"></span>
                                         </label>
                                     </li>
                                     <li class="pe-1">
                                         <label>
-                                            <input type="radio" name="color" value="Blue Heather" class="d-none">
+                                            <input type="radio" name="color" value="Red Heather" class="d-none">
                                             <span class="colorex"></span>
                                         </label>
                                     </li>
                                     <li class="pe-1">
                                         <label>
-                                            <input type="radio" name="color" value="Blue Heather" class="d-none">
+                                            <input type="radio" name="color" value="Green Heather" class="d-none">
                                             <span class="colorex"></span>
                                         </label>
                                     </li>
@@ -140,10 +142,9 @@
                         <div class="row pb-3">
                             <div class="col ms-1">
                                 <select class="form-select w-50" name="size" id="size" style="background-color: #f7f2f0;">
-                                    <option value="tiny">S</option>
-                                    <option value="biggar">M</option>
-                                    <option value="biggest">XLLLLLL</option>
-                                    <option value="Huge">XLLLL</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
                                 </select>
                             </div>
                         </div>
@@ -153,9 +154,9 @@
                                     <b>Quantity: </b>
                                     <select class="form-select w-25 ms-1" name="quantity" id="quantity" style="background-color: #f7f2f0;">
                                         <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
                                     </select>
                                 </div>
                             </div>
@@ -163,8 +164,15 @@
                         <div class="row pb-4">
                             <div class="col ms-1">
                                 <div class="container-fluid d-flex align-items-center mx-0 px-0">
-                                    <button class="btn btn-danger" style="background-color: #f34545;">Buy Physical</button>
-                                    <b class="ms-2" style="font-size: 1.2rem;">CA$69.00</b>
+                                        <input type="hidden" name="price" value="<%= data.price %>"/>
+                                        <input type="hidden" name="name" value="<%= data.name %>"/>
+                                        <input type="hidden" name="description" value="<%= data.description %>"/>
+
+                                        <input class="btn btn-danger" type="submit" value="Buy Physical" style="background-color: #f34545;"/>
+                                       <!--  <button class="btn btn-danger" style="background-color: #f34545;">Buy Physical</button>-->
+                                    
+                                    
+                                    <b class="ms-2" style="font-size: 1.2rem;">CA$<%= data.price %></b>
                                 </div>
                             </div>
                         </div>
@@ -180,6 +188,7 @@
                         </div>
                     </div>
                 </div>
+                </form>
                 <div class="col-12 d-md-none">
                     <div class="row">
                         <h2>Description</h2>
@@ -228,6 +237,28 @@
     </div>
     <%- include('./partials/footer') %>
     <%- include('./partials/bootstrapscript') %>
+    
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+        if (document.querySelector('input[name="color"]')) {
+            document.querySelectorAll('input[name="color"]').forEach((elem) => {
+                elem.addEventListener("change", function(event) {
+               // var item = event.target.value;
+              //  document.getElementById("color-name").innerHTML = "Hello JavaScript!";
+                console.log(event.target.value);
+                document.getElementById("color-name").innerHTML = "Color: "+event.target.value;
+
+                });
+            });
+        }
+        
+        // var checked_color = document.querySelector('input[name = "color"]:checked');
+        // if(checked_color != null){  //Test if something was checked
+        //     //document.getElementById("color-name").innerHTML = "Hello JavaScript!";
+        // } 
+        
+
+    </script>
+
 </body>
 </html>

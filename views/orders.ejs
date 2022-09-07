@@ -4,7 +4,6 @@
     <title>HELP</title>
     <%- include('./partials/head') %> 
     <% if(locals.isAuthed == true){%>
-        <% console.log(locals.user)%>
     <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
     <%  } else {%>
     <%-     include('./partials/navbar-signed-out')%>

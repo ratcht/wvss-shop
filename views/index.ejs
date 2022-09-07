@@ -4,7 +4,6 @@
     <title><%= title %></title>
     <%- include('./partials/head') %> 
     <% if(locals.isAuthed == true){%>
-        <% console.log(locals.user)%>
     <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
     <%  } else {%>
     <%-     include('./partials/navbar-signed-out')%>
@@ -28,9 +27,11 @@
                         </div>
                     </div>
                     <div class="row mb-5">
-                        <% locals.data.forEach(element => { %>
+                        <% productData.forEach(element => { %>
                             <div class="col-6 col-sm-3 col-md-2 mb-2">
-                                <%- include('./partials/shop-item', {element: element}) %>
+                                <a href="/products/item/<%=element.sku%>">
+                                    <%- include('./partials/shop-item', {element: element}); %>
+                                </a>
                             </div>  
                         <% }) %>
                     </div>
@@ -43,9 +44,11 @@
                         </div>
                     </div>
                     <div class="row">
-                      <% locals.data.forEach(element => { %>
+                      <% productData.forEach(element => { %>
                         <div class="col-6 col-sm-3 col-md-2 mb-2">
-                            <%- include('./partials/shop-item', {element: element}) %>
+                            <a href="/products/item/<%=element.sku%>">
+                                <%- include('./partials/shop-item', {element: element}); %>
+                            </a>
                         </div>  
                     <% }) %>
                     </div>   

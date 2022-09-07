@@ -13,9 +13,12 @@ router.get('/', function(req, res, next) {
 
 router.get('/home', function(req, res, next) {
   console.log("index");
-  res.render('index', { data: ['lol1','lol2','s','sss','ff','cdf'], title: 'Wvss Shop - Home', isAuthed: req.session.isAuth, user: req.session.userInfo});
+  var sql='SELECT * FROM primaryproducts';
+  db.query(sql, function (err, data, fields) {
+  if (err) throw err;
+  res.render('index', { productData: data, title: 'Wvss Shop - Home', isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
-
+});
 
 
 module.exports = router;

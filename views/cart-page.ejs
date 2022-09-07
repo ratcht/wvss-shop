@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <%- include('./partials/head') %> 
+    <% if(locals.isAuthed == true){%>
+        <% console.log(locals.user)%>
+    <%-    include('./partials/navbar-logged-in',{userInfo : locals.user}) %>
+    <%  } else {%>
+    <%-     include('./partials/navbar-signed-out')%>
+    <%  } %>
+    <%- include('./partials/index-navbar') %>
+    <link rel="stylesheet" href="/stylesheets/cart.css">
+</head>
+<body class="mx-0 mt-5" style="height: auto; overflow-x: hidden;">
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-lg-9 pt-5">
+            <div class="container-fluid mt-4 ps-0">
+                <h1><b>Shopping Cart</b></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-lg-9">
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-lg-9 pt-4">
+            <div class="container-fluid pb-3 pt-2 px-0 mb-4" style="background-color: #ECE7E5; border-radius: 15px;">
+                <div class="row justify-content-center pt-2">
+                    <div class="col-12 d-flex justify-content-center">
+                        Subtotal (<%= cartInfo.length%> Items):
+                    </div>
+                    
+                    <b><div class="col-12 d-flex justify-content-center" style = "font-size: 1.5vw">
+                         
+                        <%var totalPrice = 0%>
+                        <%cartInfo.forEach(element => {%>
+                        <%totalPrice += parseFloat(element[4])%>   
+                        <%})%>
+                        $<%=totalPrice%>
+                    </div></b>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col d-flex justify-content-center pt-3 pb-3">
+                        <button type="button" class="btn btn-primary btn-checkout">Proceed to checkout</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <% cartInfo.forEach(element => { %>
+                <%- include('./partials/cart-item', {element: element}); %>
+                <% }) %>
+                
+               
+            </div>
+            
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer') %>
+<%- include('./partials/bootstrapscript') %>
+</body>
+</html>

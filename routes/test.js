@@ -32,15 +32,16 @@ router.get('/admin', function(req, res, next) {
 router.post('/uploadproduct', async (req, res, next) => {
   console.log("hi");
 
-  console.log(req.body.productName);
+  console.log(req.body.productD);
 
   var sku = Math.floor(100000 + Math.random() * 900000);
   //insert values
   if(req.body.productName !== null && req.body.price !== null) {
-    var insertSql='INSERT INTO primaryproducts (sku, name, price) VALUES ('+db.escape(sku)+', '+db.escape(req.body.productName)+', '+db.escape(req.body.productPrice)+');';
+    var insertSql='INSERT INTO primaryproducts (sku, name, category, price, description) VALUES ('+db.escape(sku)+', '+db.escape(req.body.productName)+', '+db.escape(req.body.productType)+', '+db.escape(req.body.productPrice)+', '+db.escape(req.body.productDescription)+');';
     db.query(insertSql, async (err, data, fields) => {
       if (err) throw err;
     });
+    return res.redirect('../test/admin');
   }
 
   
@@ -51,7 +52,7 @@ router.get('/account', function(req, res, next) {
   res.render('account', {title: 'Account Info - wvss', isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
 router.get('/cart', function(req, res, next) {
-  res.render('cart', {title: 'Your Cart'});
+  res.render('cart', {title: 'Cart', isAuthed: req.session.isAuth, user: req.session.userInfo});
 });
 
 

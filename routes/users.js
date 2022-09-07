@@ -32,7 +32,7 @@ router.get('/signup', function(req, res, next) {
 
 router.post('/loginPOST', async (req, res, next) =>{
   console.log("login");
-  console.log(req.body.email);
+  console.log("email: "+ req.body.email);
 
   const {email, password} = req.body;
   var sql='SELECT * FROM users WHERE email = ' + db.escape(req.body.email);
@@ -55,6 +55,7 @@ router.post('/loginPOST', async (req, res, next) =>{
     }
     console.log("logged");
     req.session.isAuth = true;
+    req.session.cart = []
 
     if (user.id == 130){
       req.session.isAdminAuth = true;

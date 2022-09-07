@@ -25,6 +25,7 @@ var helpRouter = require('./routes/help');
 var aboutRouter = require('./routes/about');
 var testRouter = require('./routes/test')
 var userRouter = require('./routes/users')
+var cartRouter = require('./routes/cart');
 
 var app = express();
 app.use(express.json());
@@ -49,6 +50,7 @@ app.use('/users', userRouter);
 app.use('/help', helpRouter);
 app.use('/about', aboutRouter);
 app.use('/test' , testRouter)
+app.use('/cart', cartRouter)
 
 
 

@@ -1,0 +1,43 @@
+<%console.log("eleemnt loaded" + element);%>
+<div class="col-12 col-md-9">
+  <div class="container-fluid pb-3 pt-2 px-0 mb-4" style="background-color: #ECE7E5; border-radius: 15px;">
+      <div class="container-fluid me-2">
+          <div class="row justify-content-end">
+              <div class="col-2 pe-2 d-flex justify-content-end">
+                  Price
+              </div>
+          </div>
+          <div class="row">
+              
+              <div class="col-3 px-0">
+                  <img src="/assets/item-example.jpg" alt="item-item" class="w-100 ms-3 mt-1" style="border-radius: 12px;">
+              </div>
+              <div class="col-7">
+                  <div class="container">
+                      <p><%=element[5]%></p>
+                  </div>
+                  <div class="container">
+                    <%=element[6]%>
+                  </div>
+                  <div class="container d-inline-block">
+                      <div class="row align-items-center pt-3">
+                          <div class="col-12 col-sm-3">
+                              <b>Quantity:</b>
+                          </div>
+                          <div class="col-6 col-sm-3 ps-0">
+                              <input type="number" class="form-control" min="0" step="1" value="<%=element[3]%>">
+                          </div>
+                          <div class="col">
+                              <a href="#">Delete</a> 
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-2 pt-2 pe-2 d-flex justify-content-end">
+                  <p>CA$<%=element[4]%></p>
+              </div>
+              
+            </div>
+      </div>
+  </div>
+</div>

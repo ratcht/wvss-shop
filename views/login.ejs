@@ -4,7 +4,6 @@
     <%- include('./partials/head') %>
     <link rel="stylesheet" href="/stylesheets/login.css">
     <link rel="stylesheet" href="/public/stylesheets/all.css">
-    <% console.log(locals.isAuthed);%>
     <% if(locals.isAuthed == true){%>
     <%-    include('./partials/navbar-logged-in',{userInfo : locals.userInfo} )%>
     <%  } else {%>
