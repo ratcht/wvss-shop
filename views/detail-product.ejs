@@ -96,7 +96,7 @@
                     </div>
                 </div>
     <!----------------- form ----------------->
-                <form action = "/cart/add/<%= data.sku %>" method = "POST">
+                <form action = "/cart/add/" method = "POST">
                 <div class="col-12 col-lg-5 col-xl-3">
                     <div class="container-fluid buy-cont">
                         <div class="row pb-2 pt-2">
@@ -167,6 +167,8 @@
                                         <input type="hidden" name="price" value="<%= data.price %>"/>
                                         <input type="hidden" name="name" value="<%= data.name %>"/>
                                         <input type="hidden" name="description" value="<%= data.description %>"/>
+                                        <input type="hidden" name="sku" value="<%= data.sku %>"/>
+
 
                                         <input class="btn btn-danger" type="submit" value="Buy Physical" style="background-color: #f34545;"/>
                                        <!--  <button class="btn btn-danger" style="background-color: #f34545;">Buy Physical</button>-->
@@ -211,7 +213,9 @@
                     <div class="row mb-5">
                         <% productData.forEach(element => { %>
                             <div class="col-6 col-sm-3 col-md-2 mb-2">
-                                <%- include('./partials/shop-item' , {element: element} ); %>
+                                <a href="/products/item/<%=element.sku%>">
+                                    <%- include('./partials/shop-item', {element: element}); %>
+                                </a>
                             </div>  
                         <% }) %>
                     </div>
@@ -226,7 +230,9 @@
                     <div class="row">
                       <% productData.forEach(element => { %>
                         <div class="col-6 col-sm-3 col-md-2 mb-2">
-                            <%- include('./partials/shop-item' , {element: element}); %>
+                            <a href="/products/item/<%=element.sku%>">
+                                <%- include('./partials/shop-item', {element: element}); %>
+                            </a>
                         </div>  
                     <% }) %>
                     </div>   

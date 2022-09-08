@@ -44,7 +44,7 @@
                          
                         <%var totalPrice = 0%>
                         <%cartInfo.forEach(element => {%>
-                        <%totalPrice += parseFloat(element[4])%>   
+                        <%totalPrice += parseFloat(element[4]) * parseFloat(element[3])%>   
                         <%})%>
                         $<%=totalPrice%>
                     </div></b>
@@ -57,7 +57,8 @@
             </div>
             <div class="row">
                 <% cartInfo.forEach(element => { %>
-                <%- include('./partials/cart-item', {element: element}); %>
+                <% var index = cartInfo.indexOf(element);   %>
+                <%- include('./partials/cart-item', {element: element, index: index}); %>
                 <% }) %>
                 
                
